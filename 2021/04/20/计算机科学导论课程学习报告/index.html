@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Sheep.svg">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/Sheep.svg">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"sheeprooo.top","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="此文为大一上计算机科学概论课程结课论文，为纪念第一次完成数千字的论文，防止不慎弄丢，因此上传至博客，没啥水平，仅作纪念">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机科学导论课程学习报告">
+<meta property="og:url" content="https://sheeprooo.top/2021/04/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A/index.html">
+<meta property="og:site_name" content="sheeprooo&#39;s Blog">
+<meta property="og:description" content="此文为大一上计算机科学概论课程结课论文，为纪念第一次完成数千字的论文，防止不慎弄丢，因此上传至博客，没啥水平，仅作纪念">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-04-20T14:43:51.000Z">
+<meta property="article:modified_time" content="2021-06-24T17:16:59.814Z">
+<meta property="article:author" content="sheeprooo">
+<meta property="article:tag" content="计算机科学">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://sheeprooo.top/2021/04/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>计算机科学导论课程学习报告 | sheeprooo's Blog</title>
+  
+
+
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?780d906d7b36719fd29918ca0e980684";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">sheeprooo's Blog</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Hello World</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签<span class="badge">9</span></a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类<span class="badge">6</span></a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档<span class="badge">14</span></a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sheeprooo.top/2021/04/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="https://z3.ax1x.com/2021/04/02/cehqlF.png">
+      <meta itemprop="name" content="sheeprooo">
+      <meta itemprop="description" content="千年暗室，一灯即明">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="sheeprooo's Blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          计算机科学导论课程学习报告
+        </h1>
+
+        <div class="post-meta">
+		  
+		  
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-04-20 22:43:51" itemprop="dateCreated datePublished" datetime="2021-04-20T22:43:51+08:00">2021-04-20</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-06-25 01:16:59" itemprop="dateModified" datetime="2021-06-25T01:16:59+08:00">2021-06-25</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">计算机科学</span></a>
+                </span>
+            </span>
+
+          
+            <span id="/2021/04/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A/" class="post-meta-item leancloud_visitors" data-flag-title="计算机科学导论课程学习报告" title="阅读次数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span class="leancloud-visitors-count"></span>
+            </span>
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <blockquote>
+<p>此文为大一上计算机科学概论课程结课论文，为纪念第一次完成数千字的论文，防止不慎弄丢，因此上传至博客，没啥水平，仅作纪念</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="计算机科学导论课程学习报告"><a href="#计算机科学导论课程学习报告" class="headerlink" title="计算机科学导论课程学习报告"></a>计算机科学导论课程学习报告</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>摘要：继19世纪查尔斯·巴贝奇发明可编程的分析机以来，计算机已经经过了两个世纪的发展。而在计算机高速发展的同时，信息安全也成了每个人不得不重视的问题。通过对计算机科学导论课程的学习，我对于信息安全及计算机组成的见解如下。</p>
+<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><p>关键词：计算机 信息安全 硬件系统 操作系统 网络 数据库 程序设计语言 算法  </p>
+<h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2><p>一、引言<br>继19世纪查尔斯·巴贝奇发明可编程的分析机以来，计算机已经经过了两个世纪的发展。1946年诞生的基于二进制的ENIAC，后又改进为冯·诺依曼结构，奠定了未来计算机的基础；1958年，罗伯特·诺伊斯发明了集成电路推动了第三代计算机的发展；1971年，Kenbak公司推出了Kenbak-1，世界上第一台个人PC，计算机从此开始逐渐走进千家万户；1969年，因特网诞生；1989年，英国科学家蒂姆·伯纳斯-李发明了万维网；随着因特网的快速发展，大量的局域网和个人计算机用户接入，世界通过计算机连接在了一起，构成了地球村。</p>
+<p>而在计算机高速发展的同时，信息安全也成了每个人不得不重视的问题。作为新时代计算机信息安全专业的学生，我们不仅要学习信息安全方面的知识，更要了解计算机的基础结构、工作原理等。</p>
+<h2 id="二、信息安全"><a href="#二、信息安全" class="headerlink" title="二、信息安全"></a>二、信息安全</h2><p>二、信息安全<br>21 世纪是信息的时代。一方面，信息技术伴随计算机的高速发展而迅速壮大，呈现出空前繁荣的景象，另一方面, 危害信息安全的事件不断发生，2016年8月的徐玉玉案，2016年9月Mirai开启僵尸物联网时代，2017年4月“永恒之蓝”勒索病毒在全球范围内爆发……信息安全事关社会稳定和国家安全，为应对新时代愈发严重的信息安全问题，我国于2017年6月1日开始实行《中华人民共和国网络安全法》以确保公民及国家的信息安全。信息安全主要包括以下 4 个方面：信息设备安全、数据安全、内容安全和行为安全，信息系统硬件结构的安全和操作系统的安全是信息系统安全的基础，密码、网络安全等技术是关键技术，只有从信息系统的硬件和软件的底层采取安全措施，从整体上采取措施，才能比较有效地确保信息系统的安全[1]。</p>
+<p>在这个技术日新月异的新时代，有木马，有病毒，有Dos攻击，甚至量子计算机也在逐渐的开发中，当这种运算速度远强于传统计算机的工具诞生，届时受到严重威胁的将是整个世界的信息安全，而我们学习信息安全方面的知识，就走在构建信息安全的社会的道路上。在现在这个信息发达，能力者众多的时代，我们若想为构建信息安全社会贡献一份力量，就要加强在这方面的知识能力和认知，多了解国内外信息安全案例，分析导致问题的原因，安全隐患，威胁程度等，并构想该从何去避免此问题发生或解决此问题。</p>
+<h2 id="三、浅析计算机"><a href="#三、浅析计算机" class="headerlink" title="三、浅析计算机"></a>三、浅析计算机</h2><p>三、浅析计算机</p>
+<h3 id="计算机硬件系统的结构和工作过程"><a href="#计算机硬件系统的结构和工作过程" class="headerlink" title="计算机硬件系统的结构和工作过程"></a>计算机硬件系统的结构和工作过程</h3><p>计算机硬件系统的结构和工作过程：<br>计算机硬件系统为冯·诺依曼结构，分为存储器、运算器、控制器、输入设备和输出设备。</p>
+<p>计算机由许多小型电子电路构成门，通过这些电路的电压电平来表示0和1进行布尔运算，而多个门又构成了触发器电路，触发器是计算机存储器的基本部件。超大规模集成（VLSI）技术将数百万个电子元件构造在芯片上，从而创建出包含数百万个触发器及其控制电路的微型设备。存储器是一种利用半导体、磁性介质等技术制成的存储资料的电子设备，其电子电路中的资料以二进制方式存储。存储器可分为内部存储器（即主存储器）和外部存储器。计算机包含了大量如触发器的电路用于存储数据，每一个电路能存储一个位，这种位存储器就是计算机的主存储器。为了区分计算机主存储器中的个存储单元，每个存储单元都被赋予了唯一的“名字”，即地址[2]，CPU可以直接通过寻址找到主存中的内容。内部存储器的特点是读写速度快，但缺点就是具有一定的不稳定性且容量较小，因此有了容量大且更稳定的外部存储器，例如硬盘、CD盘、DVD盘等。机械硬盘、CD盘、DVD盘等外部存储器都是通过高速旋转存储盘来进行读写数据，基于磁技术和光技术的外部存储器读写数据一般通过机械运动来实现，因此有着读写速度慢甚至机械元件易故障的缺点，而闪存技术就解决了这个问题，在闪存系统中，二进制位是由电子信号直接发送到存储介质中的，电子信号使该介质中的二氧化硅微小晶格截获电子，从而转换微电子电路的性质进行存储[2]。与磁系统和光系统不同，闪存对物理震动不敏感，因此，基于闪存技术的固态硬盘已逐步取代了基于磁系统的机械硬盘。</p>
+<p>计算机中执行各种算数和逻辑运算的部件被称为运算器，可以执行加、减、乘、除四则运算及与、或、非、异或等逻辑操作。运算器由算数逻辑单元（ALU）、累加器、状态寄存器、通用寄存器等组成。运算器的操作和操作种类由控制器决定，而处理的数据来自存储器，处理后的结果或送回寄存器，或寄存在运算器中。</p>
+<p>计算机中按照预定顺序改变主电路或控制电路中电阻值来控制电动机的启动、调速、制动和反向的主令装置被称为控制器，由程序计数器、指令寄存器、指令译码器、时序产生器和操作控制器组成，是发布命令的“决策机构”，即完成协调和指挥整个计算机系统的操作。控制器是用来处理计算机与其他设备的通信的中间设备，是通过电缆与计算机机箱里的外围设备或者是与计算机背面的端口相连接的。<br>输入设备是向计算机输入数据和信息的设备，是计算机与用户或其他设备通信的桥梁，是用户和计算机系统之间进行信息交换的主要装置之一，包括键盘、鼠标等。</p>
+<p>输出设备是计算机硬件系统的终端设备，用于接收计算机数据的输出显示、打印、声音、控制外围设备操作等，可以把各种计算结果数据或信息以数字、字符、图像、声音等形式表现出来，例如显示器、打印机、影像输出系统、语音输出系统等。</p>
+<h3 id="操作系统、计算机网络及数据库管理系统"><a href="#操作系统、计算机网络及数据库管理系统" class="headerlink" title="操作系统、计算机网络及数据库管理系统"></a>操作系统、计算机网络及数据库管理系统</h3><p>操作系统、计算机网络及数据库管理系统：<br>操作系统（OS）是管理计算机硬件与软件资源的计算机程序，是计算机最基本也是最为重要的基础性系统软件，例如最著名的Windows、Linux等，操作系统需要处理如管理与配置内存、决定系统资源供需的优先次序、控制输入输出设备、操作网络与管理文件系统等基本事务，用于提供给用户一个与系统交互的操作界面。操作系统通常由用户界面和内核组成，用户界面负责与用户进行通信，内核包含着完成计算机安装所需的极基本功能的软件组件。用户通过操作系统的协调与计算机进行交互。</p>
+<p>计算机网络，简称为网络，是指容许节点分享资源的数字电信网络。计算机网络通常分为个域网（PAN）、局域网（LAN）、城域网（MAN）和广域网（WAN）。为了网络运行可靠而建立的用于管理网络活动的规则被称为协议，由于因特网为开放式网络，所以需要一些通过一些标准才能使不同厂商的设备和软件一起正常运行，TCP/IP协议簇是因特网所使用的协议标准的集合。一个因特网需要一个互联网范围的编址系统，为该系统内的每台计算机分配一个唯一的标识地址，即IP地址，但由于此种以位模式表示的地址难以记忆，因此出现了另一种基于域的编制系统，域名是由一串用点分隔的名字组成的因特网上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位[4]，然后通过DNS服务器解析域名得到IP地址。万维网面世后，这种域名编制系统得到了广泛应用，人们通过URL即可快速访问服务器获取信息。</p>
+<p>数据库是指一种多维的数据集合，不同于一维的平面文件只能从一个角度来展示信息，在数据库中可以通过多个数据项之间的内部链接从多个角度来获取信息。数据库管理系统是一种操纵和管理数据库的大型软件，用于建立、使用和维护数据库，它对数据库进行统一的管理和控制，以保证数据库的安全性和完整性[5]。</p>
+<h3 id="程序设计语言及算法"><a href="#程序设计语言及算法" class="headerlink" title="程序设计语言及算法"></a>程序设计语言及算法</h3><p>程序设计语言及算法：<br>程序设计语言是用来定义计算机程序的形式语言。它是一种被标准化的交流技巧，用来向计算机发出指令。一种能够让程序员准确地定义计算机所需要使用数据的计算机语言，并精确地定义在不同情况下所应当采取的行动。语言的基础是一组记号和一组规则，根据规则由记号构成的记号串的总体就是程序。程序设计语言的描述一般可以分为语法及语义。语法是说明编程语言中，哪些符号或文字的组合方式是正确的，语义则是对于编程的解释[3]。虽然程序设计语言的种类千差万别，但一般基本成分分为四种，数据成分：用以描述程序中所涉及的数据；运算成分：用以描述程序中所包含的运算；控制成分：用以表达程序中的控制构造；传输成分：用以表达程序中数据的传输。从发展历程来看，程序设计语言可分为四代。第一代机器语言，机器语言由二进制0、1代码指令构成，不同的CPU具有不同的指令系统，机器语言程序难编写、难修改、难维护，且编程效率极低，已渐渐被淘汰。第二代汇编语言，汇编语言指令是机器指令的符号化，与机器指令存在着直接的对应关系，同样的汇编语言同样存在难学难用、容易出错、维护困难等缺点。但其也存在自己的优点，可以直接访问系统接口，汇编语言翻译成的机器语言程序的效率高。第三代高级语言，高级语言是面向用户的、基本上独立于计算机种类和结构的语言。其最大的优点就是形式上接近算术语言和自然语言，概念上接近于人们通常使用的概念。因此，高级语言易学易用，通用性强，应用广泛。</p>
+<p>算法是一组明确的、可执行的步骤的有序集合，在有限的时间内终止并产生结果。算法是用来计算的工具，算法的核心是创建问题抽象的模型和明确求解目标，之后可以根据具体的问题选择不同的模式和方法完成算法的设计。在计算机科学中有许多便捷的算法，在处理问题时选对算法会使解决过程变得更加简洁。</p>
+<h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h2><p>四、总结<br>21世纪是信息高度发达的时代，因此信息的重要性非同以往，要构建信息安全的社会还很遥远，可能需要多代人的努力，而现今的接力棒就握在我们手中，社会更需要的是多方面的人才，不仅要学习信息方面的知识，计算机基础理论知识等同样不能舍弃。</p>
+<h2 id="参-考-文-献"><a href="#参-考-文-献" class="headerlink" title="参   考   文   献"></a>参   考   文   献</h2><p>[1]    沈昌祥，张焕国，冯登国，曹珍富，黄继武 . 信息安全综述[J]. 中国科学E辑：信息科学. 2007,第37卷（2）：129~150<br>[2]    刘艺，吴英，毛倩倩（译）. 计算机科学概论[M]. 第12版. 北京：人民邮电出版社，2017<br>[3]    范国泰. 语言系统简介[EB/OL]. <a target="_blank" rel="noopener" href="https://web.archive.org/">https://web.archive.org</a>，2014-06-05<br>[4]    谢从华，高蕴梅，黄晓华. Web系统与技术[M]. 北京：清华大学出版社，2018<br>[5]    赵静. 数据库管理系统的现状及发展方向[J]. 电脑编程技巧与维护. 2009，12</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>sheeprooo
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://sheeprooo.top/2021/04/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A/" title="计算机科学导论课程学习报告">https://sheeprooo.top/2021/04/20/计算机科学导论课程学习报告/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/" rel="tag"># 计算机科学</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/04/17/%E6%9D%82%E8%AE%B0/" rel="prev" title="杂记">
+      <i class="fa fa-chevron-left"></i> 杂记
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/05/25/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/" rel="next" title="课程设计">
+      课程设计 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A"><span class="nav-number">1.</span> <span class="nav-text">计算机科学导论课程学习报告</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%91%98%E8%A6%81"><span class="nav-number">1.1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E8%AF%8D"><span class="nav-number">1.2.</span> <span class="nav-text">关键词</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E5%BC%95%E8%A8%80"><span class="nav-number">1.3.</span> <span class="nav-text">一、引言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8"><span class="nav-number">1.4.</span> <span class="nav-text">二、信息安全</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E6%B5%85%E6%9E%90%E8%AE%A1%E7%AE%97%E6%9C%BA"><span class="nav-number">1.5.</span> <span class="nav-text">三、浅析计算机</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A1%AC%E4%BB%B6%E7%B3%BB%E7%BB%9F%E7%9A%84%E7%BB%93%E6%9E%84%E5%92%8C%E5%B7%A5%E4%BD%9C%E8%BF%87%E7%A8%8B"><span class="nav-number">1.5.1.</span> <span class="nav-text">计算机硬件系统的结构和工作过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E5%8F%8A%E6%95%B0%E6%8D%AE%E5%BA%93%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.5.2.</span> <span class="nav-text">操作系统、计算机网络及数据库管理系统</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E8%AF%AD%E8%A8%80%E5%8F%8A%E7%AE%97%E6%B3%95"><span class="nav-number">1.5.3.</span> <span class="nav-text">程序设计语言及算法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E6%80%BB%E7%BB%93"><span class="nav-number">1.6.</span> <span class="nav-text">四、总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82-%E8%80%83-%E6%96%87-%E7%8C%AE"><span class="nav-number">1.7.</span> <span class="nav-text">参   考   文   献</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="sheeprooo"
+      src="https://z3.ax1x.com/2021/04/02/cehqlF.png">
+  <p class="site-author-name" itemprop="name">sheeprooo</p>
+  <div class="site-description" itemprop="description">千年暗室，一灯即明</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">14</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/sheeprooo" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;sheeprooo" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:hairsheep@163.com" title="E-Mail → mailto:hairsheep@163.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">sheeprooo</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+<script>
+  (function() {
+    function leancloudSelector(url) {
+      url = encodeURI(url);
+      return document.getElementById(url).querySelector('.leancloud-visitors-count');
+    }
+
+    function addCount(Counter) {
+      var visitors = document.querySelector('.leancloud_visitors');
+      var url = decodeURI(visitors.id);
+      var title = visitors.dataset.flagTitle;
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          if (results.length > 0) {
+            var counter = results[0];
+            leancloudSelector(url).innerText = counter.time + 1;
+            Counter('put', '/classes/Counter/' + counter.objectId, { time: { '__op': 'Increment', 'amount': 1 } })
+              .catch(error => {
+                console.error('Failed to save visitor count', error);
+              });
+          } else {
+              Counter('post', '/classes/Counter', { title, url, time: 1 })
+                .then(response => response.json())
+                .then(() => {
+                  leancloudSelector(url).innerText = 1;
+                })
+                .catch(error => {
+                  console.error('Failed to create', error);
+                });
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    function showTime(Counter) {
+      var visitors = document.querySelectorAll('.leancloud_visitors');
+      var entries = [...visitors].map(element => {
+        return decodeURI(element.id);
+      });
+
+      Counter('get', '/classes/Counter?where=' + encodeURIComponent(JSON.stringify({ url: { '$in': entries } })))
+        .then(response => response.json())
+        .then(({ results }) => {
+          for (let url of entries) {
+            let target = results.find(item => item.url === url);
+            leancloudSelector(url).innerText = target ? target.time : 0;
+          }
+        })
+        .catch(error => {
+          console.error('LeanCloud Counter Error', error);
+        });
+    }
+
+    let { app_id, app_key, server_url } = {"enable":true,"app_id":"ReTDgR5EU0PzDQwOxtIJNB7a-gzGzoHsz","app_key":"oDlU1pkFjSw0Uh2tH0imedqA","server_url":null,"security":false};
+    function fetchData(api_server) {
+      var Counter = (method, url, data) => {
+        return fetch(`${api_server}/1.1${url}`, {
+          method,
+          headers: {
+            'X-LC-Id'     : app_id,
+            'X-LC-Key'    : app_key,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data)
+        });
+      };
+      if (CONFIG.page.isPost) {
+        if (CONFIG.hostname !== location.hostname) return;
+        addCount(Counter);
+      } else if (document.querySelectorAll('.post-title-link').length >= 1) {
+        showTime(Counter);
+      }
+    }
+
+    let api_server = app_id.slice(-9) !== '-MdYXbMMI' ? server_url : `https://${app_id.slice(0, 8).toLowerCase()}.api.lncldglobal.com`;
+
+    if (api_server) {
+      fetchData(api_server);
+    } else {
+      fetch('https://app-router.leancloud.cn/2/route?appId=' + app_id)
+        .then(response => response.json())
+        .then(({ api_server }) => {
+          fetchData('https://' + api_server);
+        });
+    }
+  })();
+</script>
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/clicklove.js"></script>
+
+
+</body>
+</html>
