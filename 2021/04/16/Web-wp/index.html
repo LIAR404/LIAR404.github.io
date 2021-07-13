@@ -31,8 +31,14 @@
 <meta property="og:image" content="https://z3.ax1x.com/2021/04/13/cyMAh9.png">
 <meta property="og:image" content="https://z3.ax1x.com/2021/04/13/cyMunK.png">
 <meta property="og:image" content="https://z3.ax1x.com/2021/04/20/cH8KiT.jpg">
+<meta property="og:image" content="https://sheeprooo.top/2021/04/16/Web-wp/1.jpg">
+<meta property="og:image" content="https://sheeprooo.top/2021/04/16/Web-wp/2.jpg">
+<meta property="og:image" content="https://sheeprooo.top/2021/04/16/Web-wp/3.jpg">
+<meta property="og:image" content="https://sheeprooo.top/2021/04/16/Web-wp/4.jpg">
+<meta property="og:image" content="https://sheeprooo.top/2021/04/16/Web-wp/5.jpg">
+<meta property="og:image" content="https://sheeprooo.top/2021/04/16/Web-wp/6.jpg">
 <meta property="article:published_time" content="2021-04-16T04:48:41.000Z">
-<meta property="article:modified_time" content="2021-07-13T12:36:19.312Z">
+<meta property="article:modified_time" content="2021-07-13T16:48:57.308Z">
 <meta property="article:author" content="sheeprooo">
 <meta property="article:tag" content="CTF">
 <meta name="twitter:card" content="summary">
@@ -214,7 +220,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-07-13 20:36:19" itemprop="dateModified" datetime="2021-07-13T20:36:19+08:00">2021-07-13</time>
+                <time title="修改时间：2021-07-14 00:48:57" itemprop="dateModified" datetime="2021-07-14T00:48:57+08:00">2021-07-14</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -236,7 +242,7 @@
             </span>
 			
 			<span class="post-meta-divider">|</span>
-			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 824</span>
+			<span title="post.wordcount"><span class="post-meta-item-icon"><i class="fa fa-file-word-o"></i></span>字数： 1k</span>
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
               <span class="post-meta-item-icon">
                 <i class="fa fa-eye"></i>
@@ -296,6 +302,27 @@
 <p>打开环境，点击got flag后没反应，f12查看新出现了一个302的index.php页面，使用curl工具<code>-v</code>参数输出通信的整个过程，得到flag</p>
 <h4 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h4><p>打开环境提示管理员才能得到flag</p>
 <p>使用EditThisCookie查看，有一个名为admin的cookie值为0，修改为1，刷新得到flag</p>
+<h4 id="基础认证"><a href="#基础认证" class="headerlink" title="基础认证"></a>基础认证</h4><p>打开环境，有个获得flag的click按钮，点一下弹出窗口需要登陆验证，随便输一个<code>admin/123</code>，bp抓包</p>
+<img src="/2021/04/16/Web-wp/1.jpg" style="zoom:33%;">
+
+<p>头部有一个Authorization字段，后面的值解码发现是base64加密的<code>admin:123</code></p>
+<img src="/2021/04/16/Web-wp/2.jpg" style="zoom:33%;">
+
+<p>在返回包里发现提示</p>
+<img src="/2021/04/16/Web-wp/3.jpg" style="zoom:33%;">
+
+<p>猜测用户名为admin</p>
+<p>下面就可以尝试爆破了，发送到Intruder模块，添加payload position</p>
+<img src="/2021/04/16/Web-wp/4.jpg" style="zoom:33%;">
+
+<p>选择模式，加载字典</p>
+<img src="/2021/04/16/Web-wp/5.jpg" style="zoom: 33%;">
+
+<p>添加前缀<code>admin:</code>，并对密码进行base64加密处理（同时取消勾选URL编码，不然你会看到 base64 之后的 <code>=</code> 会被转成 <code>%3d</code> ，你就算爆破到天荒地老也不会出来）</p>
+<img src="/2021/04/16/Web-wp/6.jpg" style="zoom:33%;">
+
+<p>最后在一个状态码为200的响应返回包中发现flag</p>
+<h4 id="响应包源代码"><a href="#响应包源代码" class="headerlink" title="响应包源代码"></a>响应包源代码</h4><p>饿饿. 打开环境查看源码 发现flag…我人傻了</p>
 
     </div>
 
@@ -396,7 +423,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ctfshow"><span class="nav-number">1.</span> <span class="nav-text">ctfshow</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#web%E5%85%A5%E9%97%A8"><span class="nav-number">1.1.</span> <span class="nav-text">web入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86"><span class="nav-number">1.1.1.</span> <span class="nav-text">信息搜集</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#web1"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">web1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web2"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">web2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web3"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">web3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web4"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">web4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web5"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">web5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web6"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">web6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web7"><span class="nav-number">1.1.1.7.</span> <span class="nav-text">web7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web8"><span class="nav-number">1.1.1.8.</span> <span class="nav-text">web8</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bugku"><span class="nav-number">2.</span> <span class="nav-text">bugku</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#web1-1"><span class="nav-number">2.1.</span> <span class="nav-text">web1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web2-1"><span class="nav-number">2.2.</span> <span class="nav-text">web2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web3-1"><span class="nav-number">2.3.</span> <span class="nav-text">web3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web4-1"><span class="nav-number">2.4.</span> <span class="nav-text">web4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web5-1"><span class="nav-number">2.5.</span> <span class="nav-text">web5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web6-1"><span class="nav-number">2.6.</span> <span class="nav-text">web6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web7-1"><span class="nav-number">2.7.</span> <span class="nav-text">web7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web8-1"><span class="nav-number">2.8.</span> <span class="nav-text">web8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web9"><span class="nav-number">2.9.</span> <span class="nav-text">web9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web-10"><span class="nav-number">2.10.</span> <span class="nav-text">web 10</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ctfhub"><span class="nav-number">3.</span> <span class="nav-text">ctfhub</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD"><span class="nav-number">3.1.</span> <span class="nav-text">web前置技能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.1.1.</span> <span class="nav-text">HTTP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">请求方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#302%E8%B7%B3%E8%BD%AC"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">302跳转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cookie"><span class="nav-number">3.1.1.3.</span> <span class="nav-text">cookie</span></a></li></ol></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ctfshow"><span class="nav-number">1.</span> <span class="nav-text">ctfshow</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#web%E5%85%A5%E9%97%A8"><span class="nav-number">1.1.</span> <span class="nav-text">web入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%A1%E6%81%AF%E6%90%9C%E9%9B%86"><span class="nav-number">1.1.1.</span> <span class="nav-text">信息搜集</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#web1"><span class="nav-number">1.1.1.1.</span> <span class="nav-text">web1</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web2"><span class="nav-number">1.1.1.2.</span> <span class="nav-text">web2</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web3"><span class="nav-number">1.1.1.3.</span> <span class="nav-text">web3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web4"><span class="nav-number">1.1.1.4.</span> <span class="nav-text">web4</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web5"><span class="nav-number">1.1.1.5.</span> <span class="nav-text">web5</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web6"><span class="nav-number">1.1.1.6.</span> <span class="nav-text">web6</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web7"><span class="nav-number">1.1.1.7.</span> <span class="nav-text">web7</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#web8"><span class="nav-number">1.1.1.8.</span> <span class="nav-text">web8</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#bugku"><span class="nav-number">2.</span> <span class="nav-text">bugku</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#web1-1"><span class="nav-number">2.1.</span> <span class="nav-text">web1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web2-1"><span class="nav-number">2.2.</span> <span class="nav-text">web2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web3-1"><span class="nav-number">2.3.</span> <span class="nav-text">web3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web4-1"><span class="nav-number">2.4.</span> <span class="nav-text">web4</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web5-1"><span class="nav-number">2.5.</span> <span class="nav-text">web5</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web6-1"><span class="nav-number">2.6.</span> <span class="nav-text">web6</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web7-1"><span class="nav-number">2.7.</span> <span class="nav-text">web7</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web8-1"><span class="nav-number">2.8.</span> <span class="nav-text">web8</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web9"><span class="nav-number">2.9.</span> <span class="nav-text">web9</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#web-10"><span class="nav-number">2.10.</span> <span class="nav-text">web 10</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ctfhub"><span class="nav-number">3.</span> <span class="nav-text">ctfhub</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#web%E5%89%8D%E7%BD%AE%E6%8A%80%E8%83%BD"><span class="nav-number">3.1.</span> <span class="nav-text">web前置技能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP%E5%8D%8F%E8%AE%AE"><span class="nav-number">3.1.1.</span> <span class="nav-text">HTTP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%AF%B7%E6%B1%82%E6%96%B9%E5%BC%8F"><span class="nav-number">3.1.1.1.</span> <span class="nav-text">请求方式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#302%E8%B7%B3%E8%BD%AC"><span class="nav-number">3.1.1.2.</span> <span class="nav-text">302跳转</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#cookie"><span class="nav-number">3.1.1.3.</span> <span class="nav-text">cookie</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E7%A1%80%E8%AE%A4%E8%AF%81"><span class="nav-number">3.1.1.4.</span> <span class="nav-text">基础认证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%93%8D%E5%BA%94%E5%8C%85%E6%BA%90%E4%BB%A3%E7%A0%81"><span class="nav-number">3.1.1.5.</span> <span class="nav-text">响应包源代码</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -457,7 +484,7 @@
 
         <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">全站共 16.6k 字</span>
+  <span class="post-count">全站共 16.8k 字</span>
 </div>
 
 <div class="copyright">
