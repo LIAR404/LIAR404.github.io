@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>0x 00</title>
-    <url>/2021/04/02/0x00/</url>
-    <content><![CDATA[<h1 id="JUST-A-TEST"><a href="#JUST-A-TEST" class="headerlink" title="JUST A TEST!"></a>JUST A TEST!</h1>]]></content>
+    <title>杂记</title>
+    <url>/2021/04/17/%E6%9D%82%E8%AE%B0/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e022b5894217348190d43edd945b68d8be8cbc535146ba9b7dbf1c0cecf831b2">351274e506ceb21c1026bbf6d58125d7153f14cebb490764f31e5291b9e6e96889fac705c4d3f60a883d2278ce8542eb0ce146d5284e697709c288e0b53858732d2fb144f1a8ffbe9c3be66842828dc6895999c6ff7f6182cdb7eb981480504e8713356f87f4f119eb671b8fc97dea18</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
-    <title>CTF学习笔记</title>
-    <url>/2021/05/27/CTF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>萌新的入坑记录而已</p>
+    <title>HTTP学习记录</title>
+    <url>/2021/07/12/HTTP%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>《图解HTTP》学习记录</p>
 <span id="more"></span>
-<h1 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h1><h2 id="登录界面"><a href="#登录界面" class="headerlink" title="登录界面"></a>登录界面</h2><blockquote>
-<p>登录界面必然会与数据库进行交互，所以是SQL注入的经典位置</p>
+
+<h2 id="URI和URL"><a href="#URI和URL" class="headerlink" title="URI和URL"></a>URI和URL</h2><h3 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h3><p>统一资源标识符（Uniform Resource Identifier，URI)是一个用于标识某一互联网资源名称的字符串。 该种标识允许用户对任何（包括本地和互联网）的资源通过特定的协议进行交互操作。URI由包括确定语法和相关协议的方案所定义</p>
+<img src="/2021/07/12/HTTP%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1.jpg" style="zoom: 50%;">
+
+<p>绝对路径格式</p>
+<blockquote>
+<p><a href="ftp://ftp.is.co.za/rfc/rfc1808.txt">ftp://ftp.is.co.za/rfc/rfc1808.txt</a>   </p>
+<p><a href="http://www.ietf.org/rfc/rfc2396.txt">http://www.ietf.org/rfc/rfc2396.txt</a>    </p>
+<p>ldap://[2001:db8::7]/c=GB?objectClass?one    </p>
+<p>mailto:<a href="mailto:&#74;&#x6f;&#x68;&#x6e;&#x2e;&#x44;&#x6f;&#x65;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;">&#74;&#x6f;&#x68;&#x6e;&#x2e;&#x44;&#x6f;&#x65;&#64;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#x2e;&#x63;&#x6f;&#x6d;</a>    </p>
+<p>news:comp.infosystems.<a href="http://www.servers.unix/">www.servers.unix</a>    </p>
+<p>tel:+1-816-555-1212    </p>
+<p>telnet://192.0.2.16:80/    </p>
+<p>urn:oasis:names:specification:docbook:dtd:xml:4.1.2</p>
 </blockquote>
-<p>常见登陆界面SQL语句<code>select * from admin where username = &#39;用户输入的用户名&#39; and password = &#39;用户输入的密码&#39;</code><br>万能用户名:<code>&#39; or 1=1 -- </code>     (<code>-- </code>后面有一个空格)<br>第一个<code>&#39;</code>用于闭合SQL语句用户名的单引号，<code>1=1</code>永远为真，<code>-- </code>用于注释其后的密码语句，从而绕过登录验证 </p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
+<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3>]]></content>
       <tags>
-        <tag>CTF</tag>
+        <tag>HTTP</tag>
       </tags>
   </entry>
   <entry>
@@ -62,277 +81,6 @@
       </categories>
       <tags>
         <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git学习记录</title>
-    <url>/2021/04/17/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="Git学习记录"><a href="#Git学习记录" class="headerlink" title="Git学习记录"></a>Git学习记录</h1><p>萌新在线嘤嘤嘤</p>
-<span id="more"></span>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ol>
-<li><code>git clone URL</code><blockquote>
-<p>从该URL下载文件</p>
-</blockquote>
-<ul>
-<li><code>git clone --depth 1 URL</code><blockquote>
-<p>从该URL下载最新版本文件</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>开发</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HTTP学习记录</title>
-    <url>/2021/07/12/HTTP%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>《图解HTTP》学习记录</p>
-<span id="more"></span>
-
-<h2 id="URI和URL"><a href="#URI和URL" class="headerlink" title="URI和URL"></a>URI和URL</h2><h3 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h3><p>统一资源标识符（Uniform Resource Identifier，URI)是一个用于标识某一互联网资源名称的字符串。 该种标识允许用户对任何（包括本地和互联网）的资源通过特定的协议进行交互操作。URI由包括确定语法和相关协议的方案所定义</p>
-<img src="/2021/07/12/HTTP%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/1.jpg" style="zoom: 50%;">
-
-<p>绝对路径格式</p>
-<blockquote>
-<p><a href="ftp://ftp.is.co.za/rfc/rfc1808.txt">ftp://ftp.is.co.za/rfc/rfc1808.txt</a>   </p>
-<p><a href="http://www.ietf.org/rfc/rfc2396.txt">http://www.ietf.org/rfc/rfc2396.txt</a>    </p>
-<p>ldap://[2001:db8::7]/c=GB?objectClass?one    </p>
-<p>mailto:<a href="mailto:&#74;&#x6f;&#x68;&#x6e;&#46;&#x44;&#111;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#109;">&#74;&#x6f;&#x68;&#x6e;&#46;&#x44;&#111;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#109;</a>    </p>
-<p>news:comp.infosystems.<a href="http://www.servers.unix/">www.servers.unix</a>    </p>
-<p>tel:+1-816-555-1212    </p>
-<p>telnet://192.0.2.16:80/    </p>
-<p>urn:oasis:names:specification:docbook:dtd:xml:4.1.2</p>
-</blockquote>
-<h3 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h3>]]></content>
-      <tags>
-        <tag>HTTP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Kali学习记录</title>
-    <url>/2021/04/03/Kali%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="Kali"><a href="#Kali" class="headerlink" title="Kali"></a>Kali</h1><p>犯罪记录(x)</p>
-<span id="more"></span>
-<blockquote>
-<p>Kali学的好，牢饭吃到饱<br>这里是Kali学习记录<del>(犯罪日记)</del></p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>CTF 渗透测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NUAA CTF 2021 Web Write up</title>
-    <url>/2021/04/10/NUAA%20CTF%202021%20WP/</url>
-    <content><![CDATA[<h1 id="NUAA-CTF-2021-Web-Write-up"><a href="#NUAA-CTF-2021-Web-Write-up" class="headerlink" title="NUAA CTF 2021 Web Write up"></a>NUAA CTF 2021 Web Write up</h1><p>第一场正式的的CTF比赛WP</p>
-<span id="more"></span>
-
-<h2 id="签到题"><a href="#签到题" class="headerlink" title="签到题"></a>签到题</h2><p>打开环境，查看网页源代码，即发现flag<br><img src="https://img-blog.csdnimg.cn/20210328195900666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_20,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="DDoSme"><a href="#DDoSme" class="headerlink" title="DDoSme"></a>DDoSme</h2><p>打开环境，提示Do you kNow .swp file? 直接百度，查到<br><img src="https://img-blog.csdnimg.cn/20210328204502583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>于是知道会要用到Linux<br>用dirsearch扫一下网站目录，发现了.index.php.swp文件</p>
-<p><img src="https://img-blog.csdnimg.cn/20210328204551203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>地址栏URL后面输入<code>.index.php.swp</code>下载swp文件<br>这个时候用notepad打开发现全是乱码，百度发现<br><img src="https://img-blog.csdnimg.cn/20210328200950634.png"></p>
-<p>于是复制到Linux虚拟机中，</p>
-<p><img src="https://img-blog.csdnimg.cn/20210328204652570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>再<br><img src="https://img-blog.csdnimg.cn/20210328201104698.png" alt="在这里插入图片描述"></p>
-<p>得到还原后的PHP文件</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">areyouok</span>(<span class="params"><span class="variable">$greeting</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> preg_match(<span class="string">&#x27;/Baby.*PHP/is&#x27;</span>,<span class="variable">$greeting</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$greeting</span>=@<span class="variable">$_POST</span>[<span class="string">&#x27;greeting&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(!is_array(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">    <span class="keyword">if</span>(!areyouok(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">        <span class="keyword">if</span>(strpos(<span class="variable">$greeting</span>,<span class="string">&#x27;Baby PHP&#x27;</span>)!==<span class="literal">false</span>)&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;flag&#123;xxxxxx&#125;&#x27;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;Do you kNow .swp file?&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&#x27;Do you know PHP?&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>emmm…PHP学的还不多，看不懂，果断度娘，发现……竟然跟18年i春秋圣诞欢乐赛题一样…原理就是pcre具有回溯上限，当回溯超过上限时返回 false，从而绕过正则匹配函数(虽然俺不懂，但俺会CV大法)<br>链接:<a href="https://www.jianshu.com/p/68f3c8e5d2b4">2018年i春秋圣诞欢乐赛Web WP</a><br>然后通过Python写个脚本：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line"></span><br><span class="line">files = &#123;</span><br><span class="line">  <span class="string">&#x27;greeting&#x27;</span>:(<span class="string">&#x27;Baby PHP&#x27;</span> + <span class="string">&#x27;a&#x27;</span> * <span class="number">1000000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">res = requests.post(<span class="string">&#x27;http://server.cooook.icu:10003/index.php&#x27;</span>, data=files, allow_redirects=<span class="literal">False</span>)</span><br><span class="line">print(res.text)</span><br></pre></td></tr></table></figure>
-<p>运行之后，成功拿到flag</p>
-<p><img src="https://img-blog.csdnimg.cn/20210328204722851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="easy-xss"><a href="#easy-xss" class="headerlink" title="easy_xss"></a>easy_xss</h2><p>看题目知道是xss跨站脚本漏洞攻击<br>题目要求是：<br><img src="https://img-blog.csdnimg.cn/20210328201752270.png" alt="在这里插入图片描述"><br>扫了下网站<br><img src="https://img-blog.csdnimg.cn/20210328201935905.png" alt="在这里插入图片描述"><br>看到了upload.php，试了一下emmm确实打不开<br>所以要登入管理员界面，xss攻击，想到了窃取cookie绕过登录，<br>而且正好点开Read sample post出现了管理员发表的文章</p>
-<p>然后..就卡住了(っ °Д °)っ<br><img src="https://img-blog.csdnimg.cn/20210328204809754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="base64"><a href="#base64" class="headerlink" title="base64"></a>base64</h2><p><img src="https://img-blog.csdnimg.cn/2021032821021262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210328210244539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_48,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>emmm……PHP，Base64，这俩合一起….看了度娘都看不懂…毫无思路</p>
-<p>比完赛，感觉 我是废物（；´д｀）ゞ</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>杂记</title>
-    <url>/2021/04/17/%E6%9D%82%E8%AE%B0/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="e022b5894217348190d43edd945b68d8be8cbc535146ba9b7dbf1c0cecf831b2">351274e506ceb21c1026bbf6d58125d7153f14cebb490764f31e5291b9e6e96889fac705c4d3f60a883d2278ce8542eb0ce146d5284e697709c288e0b53858732d2fb144f1a8ffbe9c3be66842828dc6895999c6ff7f6182cdb7eb981480504e8713356f87f4f119eb671b8fc97dea18</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
-    <title>Web-wp</title>
-    <url>/2021/04/16/Web-wp/</url>
-    <content><![CDATA[<p>歪脖的达不溜屁</p>
-<span id="more"></span>
-
-<h1 id="ctfshow"><a href="#ctfshow" class="headerlink" title="ctfshow"></a>ctfshow</h1><h2 id="web入门"><a href="#web入门" class="headerlink" title="web入门"></a>web入门</h2><h3 id="信息搜集"><a href="#信息搜集" class="headerlink" title="信息搜集"></a>信息搜集</h3><h4 id="web1"><a href="#web1" class="headerlink" title="web1"></a>web1</h4><p>简单的f12</p>
-<h4 id="web2"><a href="#web2" class="headerlink" title="web2"></a>web2</h4><p>打开页面提示无法查看源代码 迷惑.jpg</p>
-<p>我一下就打开了，很快啊</p>
-<p>看了下hint，get新知识，在URL头部添加<code>view-source:</code>即可查看源码</p>
-<p>（原来是禁用了右键，习惯用快捷键真是不好意西:-)</p>
-<h4 id="web3"><a href="#web3" class="headerlink" title="web3"></a>web3</h4><p>bp抓包，flag在返回包里</p>
-<h4 id="web4"><a href="#web4" class="headerlink" title="web4"></a>web4</h4><p>打开robots.txt，得到一个flagishere.txt，打开<code>/flagishere.txt</code>，得到flag</p>
-<h4 id="web5"><a href="#web5" class="headerlink" title="web5"></a>web5</h4><p>在URL尾部输入<code>/index.phps</code>，得到phps文件，打开得到flag</p>
-<h4 id="web6"><a href="#web6" class="headerlink" title="web6"></a>web6</h4><p>提示应该是源码泄露，用dirsearch扫了一下发现<code>www.zip</code>，下载到本地得到一个fl000g.txt文件，打开得到个flag{flag_here}，提交错误</p>
-<p>…原来是个假flag，在URL尾部输入<code>/fl000g.txt</code>得到真flag</p>
-<h4 id="web7"><a href="#web7" class="headerlink" title="web7"></a>web7</h4><p>根据提示感觉应该是git泄露，URL尾部添加<code>/.git/</code>，得到flag</p>
-<h4 id="web8"><a href="#web8" class="headerlink" title="web8"></a>web8</h4><p>git泄露都考了，应该就是svn了，URL尾部添加<code>/.svn/</code>，得到flag</p>
-<h1 id="bugku"><a href="#bugku" class="headerlink" title="bugku"></a>bugku</h1><h2 id="web1-1"><a href="#web1-1" class="headerlink" title="web1"></a>web1</h2><p>…滑稽脸<br><img src="https://z3.ax1x.com/2021/04/16/cf8LQK.jpg" style="zoom: 25%;"><br>F12打开源码，找到flag</p>
-<h2 id="web2-1"><a href="#web2-1" class="headerlink" title="web2"></a>web2</h2><p>是一个填写验证码的输入框，然后发现无法输入两个字符，F12审查元素，果然输入框限制了maxlength，修改maxlength为2即可</p>
-<h2 id="web3-1"><a href="#web3-1" class="headerlink" title="web3"></a>web3</h2><p>打开场景是一段PHP代码，</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$what</span>=<span class="variable">$_GET</span>[<span class="string">&#x27;what&#x27;</span>];</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$what</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$what</span>==<span class="string">&#x27;flag&#x27;</span>)</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;flag&#123;****&#125;&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<p>审计，是要通过get的方式提交一个变量<code>what=flag</code>，<br>在地址栏输入<code>http://114.67.246.176:16477/?what=flag</code>即可得到flag</p>
-<h2 id="web4-1"><a href="#web4-1" class="headerlink" title="web4"></a>web4</h2><p>打开场景又是一段PHP代码，</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$what</span>=<span class="variable">$_POST</span>[<span class="string">&#x27;what&#x27;</span>];</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$what</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$what</span>==<span class="string">&#x27;flag&#x27;</span>)</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;flag&#123;****&#125;&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<p>审计，是要通过post的方式提交一个变量<code>what=flag</code>,通过hackbar post一下即可</p>
-<h2 id="web5-1"><a href="#web5-1" class="headerlink" title="web5"></a>web5</h2><p>打开场景又是一段PHP代码，</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$num</span>=<span class="variable">$_GET</span>[<span class="string">&#x27;num&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(!is_numeric(<span class="variable">$num</span>))</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$num</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$num</span>==<span class="number">1</span>)</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;flag&#123;**********&#125;&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>审计，是弱类型比较，要求num变量既不是数字又满足等于1的条件，所以在1后面加一个字母即可<br>通过get方式提交<code>http://114.67.246.176:12222/?num=1a</code><br>得到flag</p>
-<h2 id="web6-1"><a href="#web6-1" class="headerlink" title="web6"></a>web6</h2><p>打开场景一堆弹窗，关都关不完，查看网页源码，<br><img src="https://z3.ax1x.com/2021/04/13/cyMAh9.png" style="zoom:33%;"><br>…发现写了一堆alert…绝了<br>在最下面发现了注释掉的编码，<br><img src="https://z3.ax1x.com/2021/04/13/cyMunK.png" style="zoom: 33%;"><br>查了一下是Unicode编码，通过工具Unicode转ASCII得到flag</p>
-<h2 id="web7-1"><a href="#web7-1" class="headerlink" title="web7"></a>web7</h2><p>弹窗提示停止网页刷新可得到flag<br>查看网页源代码，发现<br><img src="https://z3.ax1x.com/2021/04/20/cH8KiT.jpg" style="zoom: 50%;"><br>并且前面的图片命名为num.jpg，于是尝试刷新，发现图片num确实随着刷新改变，然后不断刷新，最后在一次刷新后圈圈的地方出现flag</p>
-<h2 id="web8-1"><a href="#web8-1" class="headerlink" title="web8"></a>web8</h2><blockquote>
-<p>PHP暂略</p>
-</blockquote>
-<h2 id="web9"><a href="#web9" class="headerlink" title="web9"></a>web9</h2><blockquote>
-<p>PHP暂略</p>
-</blockquote>
-<h2 id="web-10"><a href="#web-10" class="headerlink" title="web 10"></a>web 10</h2><p>打开页面显示什么也没有？信个鬼<br>根据描述头等舱，联想到消息头，BP抓包，在消息头中得到flag</p>
-<h1 id="ctfhub"><a href="#ctfhub" class="headerlink" title="ctfhub"></a>ctfhub</h1><h2 id="web前置技能"><a href="#web前置技能" class="headerlink" title="web前置技能"></a>web前置技能</h2><h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h3><h4 id="请求方式"><a href="#请求方式" class="headerlink" title="请求方式"></a>请求方式</h4><p>HTTP/1.1 八种请求方式: GET,POST,HEAD,OPTIONS,PUT,DELETE,TRACE,CONNECT</p>
-<p>打开环境提示HTTP方法为GET，使用CTFHUB方法，我会给你flag</p>
-<p>bp抓包改包重放，得到flag</p>
-<h4 id="302跳转"><a href="#302跳转" class="headerlink" title="302跳转"></a>302跳转</h4><p>看了wp才做出来</p>
-<p>打开环境，点击got flag后没反应，f12查看新出现了一个302的index.php页面，使用curl工具<code>-v</code>参数输出通信的整个过程，得到flag</p>
-<h4 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h4><p>打开环境提示管理员才能得到flag</p>
-<p>使用EditThisCookie查看，有一个名为admin的cookie值为0，修改为1，刷新得到flag</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>注册表大法</title>
-    <url>/2021/04/06/%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%A4%A7%E6%B3%95/</url>
-    <content><![CDATA[<p>注册表大法DIY电脑永远滴神</p>
-<span id="more"></span>
-<h1 id="CMD窗口修改字体"><a href="#CMD窗口修改字体" class="headerlink" title="CMD窗口修改字体"></a>CMD窗口修改字体</h1><blockquote>
-<p>CMD默认字体颜值无力吐槽，甚至还有1和l、0和o分不清的问题，于是打算修改一下，添加consolas字体</p>
-</blockquote>
-<h2 id="打开注册表编辑器"><a href="#打开注册表编辑器" class="headerlink" title="打开注册表编辑器"></a>打开注册表编辑器</h2><p>首先<code>win+r</code>,<code>regedit</code>打开</p>
-<h2 id="找到修改路径"><a href="#找到修改路径" class="headerlink" title="找到修改路径"></a>找到修改路径</h2><p>打开路径<code>计算机\HKEY_CURRENT_USER\Console</code><br>再打开<code>%SystemRoot%_system32_cmd.exe</code>项<br>将<code>CodePage</code>键值十进制修改为<code>437</code><br><del>&gt; 同理，修改Dev-C++窗口的字体，只需打开<code>D:_Dev-Cpp_ConsolePauser.exe</code>项，修改键值即可</del><br>不要这么改！o(￣┰￣*)ゞ<br>导致了我不知道为什么编译不了程序，于是重做了一遍系统…</p>
-]]></content>
-      <categories>
-        <category>DIY</category>
-      </categories>
-      <tags>
-        <tag>DIY</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>计算机科学导论课程学习报告</title>
-    <url>/2021/04/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A/</url>
-    <content><![CDATA[<blockquote>
-<p>此文为大一上计算机科学概论课程结课论文，为纪念第一次完成数千字的论文，防止不慎弄丢，因此上传至博客，没啥水平，仅作纪念</p>
-</blockquote>
-<span id="more"></span>
-<h1 id="计算机科学导论课程学习报告"><a href="#计算机科学导论课程学习报告" class="headerlink" title="计算机科学导论课程学习报告"></a>计算机科学导论课程学习报告</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>摘要：继19世纪查尔斯·巴贝奇发明可编程的分析机以来，计算机已经经过了两个世纪的发展。而在计算机高速发展的同时，信息安全也成了每个人不得不重视的问题。通过对计算机科学导论课程的学习，我对于信息安全及计算机组成的见解如下。</p>
-<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><p>关键词：计算机 信息安全 硬件系统 操作系统 网络 数据库 程序设计语言 算法  </p>
-<h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2><p>一、引言<br>继19世纪查尔斯·巴贝奇发明可编程的分析机以来，计算机已经经过了两个世纪的发展。1946年诞生的基于二进制的ENIAC，后又改进为冯·诺依曼结构，奠定了未来计算机的基础；1958年，罗伯特·诺伊斯发明了集成电路推动了第三代计算机的发展；1971年，Kenbak公司推出了Kenbak-1，世界上第一台个人PC，计算机从此开始逐渐走进千家万户；1969年，因特网诞生；1989年，英国科学家蒂姆·伯纳斯-李发明了万维网；随着因特网的快速发展，大量的局域网和个人计算机用户接入，世界通过计算机连接在了一起，构成了地球村。</p>
-<p>而在计算机高速发展的同时，信息安全也成了每个人不得不重视的问题。作为新时代计算机信息安全专业的学生，我们不仅要学习信息安全方面的知识，更要了解计算机的基础结构、工作原理等。</p>
-<h2 id="二、信息安全"><a href="#二、信息安全" class="headerlink" title="二、信息安全"></a>二、信息安全</h2><p>二、信息安全<br>21 世纪是信息的时代。一方面，信息技术伴随计算机的高速发展而迅速壮大，呈现出空前繁荣的景象，另一方面, 危害信息安全的事件不断发生，2016年8月的徐玉玉案，2016年9月Mirai开启僵尸物联网时代，2017年4月“永恒之蓝”勒索病毒在全球范围内爆发……信息安全事关社会稳定和国家安全，为应对新时代愈发严重的信息安全问题，我国于2017年6月1日开始实行《中华人民共和国网络安全法》以确保公民及国家的信息安全。信息安全主要包括以下 4 个方面：信息设备安全、数据安全、内容安全和行为安全，信息系统硬件结构的安全和操作系统的安全是信息系统安全的基础，密码、网络安全等技术是关键技术，只有从信息系统的硬件和软件的底层采取安全措施，从整体上采取措施，才能比较有效地确保信息系统的安全[1]。</p>
-<p>在这个技术日新月异的新时代，有木马，有病毒，有Dos攻击，甚至量子计算机也在逐渐的开发中，当这种运算速度远强于传统计算机的工具诞生，届时受到严重威胁的将是整个世界的信息安全，而我们学习信息安全方面的知识，就走在构建信息安全的社会的道路上。在现在这个信息发达，能力者众多的时代，我们若想为构建信息安全社会贡献一份力量，就要加强在这方面的知识能力和认知，多了解国内外信息安全案例，分析导致问题的原因，安全隐患，威胁程度等，并构想该从何去避免此问题发生或解决此问题。</p>
-<h2 id="三、浅析计算机"><a href="#三、浅析计算机" class="headerlink" title="三、浅析计算机"></a>三、浅析计算机</h2><p>三、浅析计算机</p>
-<h3 id="计算机硬件系统的结构和工作过程"><a href="#计算机硬件系统的结构和工作过程" class="headerlink" title="计算机硬件系统的结构和工作过程"></a>计算机硬件系统的结构和工作过程</h3><p>计算机硬件系统的结构和工作过程：<br>计算机硬件系统为冯·诺依曼结构，分为存储器、运算器、控制器、输入设备和输出设备。</p>
-<p>计算机由许多小型电子电路构成门，通过这些电路的电压电平来表示0和1进行布尔运算，而多个门又构成了触发器电路，触发器是计算机存储器的基本部件。超大规模集成（VLSI）技术将数百万个电子元件构造在芯片上，从而创建出包含数百万个触发器及其控制电路的微型设备。存储器是一种利用半导体、磁性介质等技术制成的存储资料的电子设备，其电子电路中的资料以二进制方式存储。存储器可分为内部存储器（即主存储器）和外部存储器。计算机包含了大量如触发器的电路用于存储数据，每一个电路能存储一个位，这种位存储器就是计算机的主存储器。为了区分计算机主存储器中的个存储单元，每个存储单元都被赋予了唯一的“名字”，即地址[2]，CPU可以直接通过寻址找到主存中的内容。内部存储器的特点是读写速度快，但缺点就是具有一定的不稳定性且容量较小，因此有了容量大且更稳定的外部存储器，例如硬盘、CD盘、DVD盘等。机械硬盘、CD盘、DVD盘等外部存储器都是通过高速旋转存储盘来进行读写数据，基于磁技术和光技术的外部存储器读写数据一般通过机械运动来实现，因此有着读写速度慢甚至机械元件易故障的缺点，而闪存技术就解决了这个问题，在闪存系统中，二进制位是由电子信号直接发送到存储介质中的，电子信号使该介质中的二氧化硅微小晶格截获电子，从而转换微电子电路的性质进行存储[2]。与磁系统和光系统不同，闪存对物理震动不敏感，因此，基于闪存技术的固态硬盘已逐步取代了基于磁系统的机械硬盘。</p>
-<p>计算机中执行各种算数和逻辑运算的部件被称为运算器，可以执行加、减、乘、除四则运算及与、或、非、异或等逻辑操作。运算器由算数逻辑单元（ALU）、累加器、状态寄存器、通用寄存器等组成。运算器的操作和操作种类由控制器决定，而处理的数据来自存储器，处理后的结果或送回寄存器，或寄存在运算器中。</p>
-<p>计算机中按照预定顺序改变主电路或控制电路中电阻值来控制电动机的启动、调速、制动和反向的主令装置被称为控制器，由程序计数器、指令寄存器、指令译码器、时序产生器和操作控制器组成，是发布命令的“决策机构”，即完成协调和指挥整个计算机系统的操作。控制器是用来处理计算机与其他设备的通信的中间设备，是通过电缆与计算机机箱里的外围设备或者是与计算机背面的端口相连接的。<br>输入设备是向计算机输入数据和信息的设备，是计算机与用户或其他设备通信的桥梁，是用户和计算机系统之间进行信息交换的主要装置之一，包括键盘、鼠标等。</p>
-<p>输出设备是计算机硬件系统的终端设备，用于接收计算机数据的输出显示、打印、声音、控制外围设备操作等，可以把各种计算结果数据或信息以数字、字符、图像、声音等形式表现出来，例如显示器、打印机、影像输出系统、语音输出系统等。</p>
-<h3 id="操作系统、计算机网络及数据库管理系统"><a href="#操作系统、计算机网络及数据库管理系统" class="headerlink" title="操作系统、计算机网络及数据库管理系统"></a>操作系统、计算机网络及数据库管理系统</h3><p>操作系统、计算机网络及数据库管理系统：<br>操作系统（OS）是管理计算机硬件与软件资源的计算机程序，是计算机最基本也是最为重要的基础性系统软件，例如最著名的Windows、Linux等，操作系统需要处理如管理与配置内存、决定系统资源供需的优先次序、控制输入输出设备、操作网络与管理文件系统等基本事务，用于提供给用户一个与系统交互的操作界面。操作系统通常由用户界面和内核组成，用户界面负责与用户进行通信，内核包含着完成计算机安装所需的极基本功能的软件组件。用户通过操作系统的协调与计算机进行交互。</p>
-<p>计算机网络，简称为网络，是指容许节点分享资源的数字电信网络。计算机网络通常分为个域网（PAN）、局域网（LAN）、城域网（MAN）和广域网（WAN）。为了网络运行可靠而建立的用于管理网络活动的规则被称为协议，由于因特网为开放式网络，所以需要一些通过一些标准才能使不同厂商的设备和软件一起正常运行，TCP/IP协议簇是因特网所使用的协议标准的集合。一个因特网需要一个互联网范围的编址系统，为该系统内的每台计算机分配一个唯一的标识地址，即IP地址，但由于此种以位模式表示的地址难以记忆，因此出现了另一种基于域的编制系统，域名是由一串用点分隔的名字组成的因特网上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位[4]，然后通过DNS服务器解析域名得到IP地址。万维网面世后，这种域名编制系统得到了广泛应用，人们通过URL即可快速访问服务器获取信息。</p>
-<p>数据库是指一种多维的数据集合，不同于一维的平面文件只能从一个角度来展示信息，在数据库中可以通过多个数据项之间的内部链接从多个角度来获取信息。数据库管理系统是一种操纵和管理数据库的大型软件，用于建立、使用和维护数据库，它对数据库进行统一的管理和控制，以保证数据库的安全性和完整性[5]。</p>
-<h3 id="程序设计语言及算法"><a href="#程序设计语言及算法" class="headerlink" title="程序设计语言及算法"></a>程序设计语言及算法</h3><p>程序设计语言及算法：<br>程序设计语言是用来定义计算机程序的形式语言。它是一种被标准化的交流技巧，用来向计算机发出指令。一种能够让程序员准确地定义计算机所需要使用数据的计算机语言，并精确地定义在不同情况下所应当采取的行动。语言的基础是一组记号和一组规则，根据规则由记号构成的记号串的总体就是程序。程序设计语言的描述一般可以分为语法及语义。语法是说明编程语言中，哪些符号或文字的组合方式是正确的，语义则是对于编程的解释[3]。虽然程序设计语言的种类千差万别，但一般基本成分分为四种，数据成分：用以描述程序中所涉及的数据；运算成分：用以描述程序中所包含的运算；控制成分：用以表达程序中的控制构造；传输成分：用以表达程序中数据的传输。从发展历程来看，程序设计语言可分为四代。第一代机器语言，机器语言由二进制0、1代码指令构成，不同的CPU具有不同的指令系统，机器语言程序难编写、难修改、难维护，且编程效率极低，已渐渐被淘汰。第二代汇编语言，汇编语言指令是机器指令的符号化，与机器指令存在着直接的对应关系，同样的汇编语言同样存在难学难用、容易出错、维护困难等缺点。但其也存在自己的优点，可以直接访问系统接口，汇编语言翻译成的机器语言程序的效率高。第三代高级语言，高级语言是面向用户的、基本上独立于计算机种类和结构的语言。其最大的优点就是形式上接近算术语言和自然语言，概念上接近于人们通常使用的概念。因此，高级语言易学易用，通用性强，应用广泛。</p>
-<p>算法是一组明确的、可执行的步骤的有序集合，在有限的时间内终止并产生结果。算法是用来计算的工具，算法的核心是创建问题抽象的模型和明确求解目标，之后可以根据具体的问题选择不同的模式和方法完成算法的设计。在计算机科学中有许多便捷的算法，在处理问题时选对算法会使解决过程变得更加简洁。</p>
-<h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h2><p>四、总结<br>21世纪是信息高度发达的时代，因此信息的重要性非同以往，要构建信息安全的社会还很遥远，可能需要多代人的努力，而现今的接力棒就握在我们手中，社会更需要的是多方面的人才，不仅要学习信息方面的知识，计算机基础理论知识等同样不能舍弃。</p>
-<h2 id="参-考-文-献"><a href="#参-考-文-献" class="headerlink" title="参   考   文   献"></a>参   考   文   献</h2><p>[1]    沈昌祥，张焕国，冯登国，曹珍富，黄继武 . 信息安全综述[J]. 中国科学E辑：信息科学. 2007,第37卷（2）：129~150<br>[2]    刘艺，吴英，毛倩倩（译）. 计算机科学概论[M]. 第12版. 北京：人民邮电出版社，2017<br>[3]    范国泰. 语言系统简介[EB/OL]. <a href="https://web.archive.org/">https://web.archive.org</a>，2014-06-05<br>[4]    谢从华，高蕴梅，黄晓华. Web系统与技术[M]. 北京：清华大学出版社，2018<br>[5]    赵静. 数据库管理系统的现状及发展方向[J]. 电脑编程技巧与维护. 2009，12</p>
-]]></content>
-      <categories>
-        <category>计算机科学</category>
-      </categories>
-      <tags>
-        <tag>计算机科学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>问题簿</title>
-    <url>/2021/04/05/%E9%97%AE%E9%A2%98%E7%B0%BF/</url>
-    <content><![CDATA[<p>记录遇到的一些有参考性的问题</p>
-<span id="more"></span>
-<h1 id="2021"><a href="#2021" class="headerlink" title="2021"></a>2021</h1><h2 id="01-03"><a href="#01-03" class="headerlink" title="01~03"></a>01~03</h2><ol>
-<li>搭建博客过程中更换next主题上传出现大量报错: <blockquote>
-<p>检查发现是因为next的github地址更换，导致git命令执行失败<br>更换后的URL: <a href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a></p>
-</blockquote>
-</li>
-<li>kali配置静态IP后无法重启网络服务: <blockquote>
-<p>翻了大量的帖子后解决了问题<br><code>root@test:~# ip addr flush dev eth0 &amp;&amp; /etc/init.d/networking restart</code><br>执行此指令后，网络服务重启成功<br>原帖: <a href="https://blog.csdn.net/w294954902/article/details/82628909">https://blog.csdn.net/w294954902/article/details/82628909</a></p>
-</blockquote>
-</li>
-</ol>
-<h2 id="04"><a href="#04" class="headerlink" title="04"></a>04</h2><ol>
-<li>重新搭建博客过程中上传文件出现大量报错: <blockquote>
-<p>发现原来是因为更改了站点配置文件中的timezone<br>orz 就因为我没事闲的把时区改成了Asia/Beijing<br>经改为Asia/Shanghai后上传，已恢复正常</p>
-</blockquote>
-</li>
-<li>创建新文章时上传文件卡住，显示ssh密钥连接不上，又ping了一下github，发现连接不上: <blockquote>
-<p>找了一下原因…原来是因为前一阵github被墙了，我就在host文件里添加了github的解析，在测试此方法无效后未删除…<br>删了那些解析后成功连接github，并且博客也可正常登录</p>
-</blockquote>
-</li>
-<li>为博客添加访问量统计功能出现错误:<blockquote>
-<p>统计功能采用的是不蒜子，搜了一下发现，原来是因为不蒜子官网的域名过期了，所以URL错误…<br>将<code>themes\next\layout\_partials</code>中<code>footer.swig</code>文件添加的</p>
-<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.footer.counter %&#125;</span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br></pre></td></tr></table></figure>
-<p>改为</p>
-<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.footer.counter %&#125;</span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br></pre></td></tr></table></figure>
-<p>官方通知: <a href="http://ibruce.info/2015/04/04/busuanzi/">http://ibruce.info/2015/04/04/busuanzi/</a></p>
-</blockquote>
-</li>
-</ol>
-<h2 id="05"><a href="#05" class="headerlink" title="05"></a>05</h2><ol>
-<li>电脑重做了系统之后，之前用的dirsearch突然用不了了，各种报错，例如<br><img src="https://z3.ax1x.com/2021/05/18/ghYPII.jpg"><br>和这样<br><img src="https://z3.ax1x.com/2021/05/18/ghYCdA.jpg"><br>因为扫不了网站目录，导致我好一段时间冷落了靶场(才不是因为懒(/▽＼)<br>后来问了道长，道长说是Python库丢失了，于是Baiduing···<blockquote>
-<p><strong>第一种问题:</strong><br>丢失了type库</p>
-<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">try</span>:</span><br><span class="line">   <span class="keyword">import</span> requests</span><br><span class="line">	except <span class="type">ImportError</span>:</span><br><span class="line">   <span class="keyword">import</span> os</span><br><span class="line">   os.system(&#x27;pip install <span class="class"><span class="keyword">type</span>&#x27;)</span></span><br><span class="line">   <span class="keyword">import</span> requests</span><br></pre></td></tr></table></figure>
-<p>补充type库</p>
-<p><a href="https://blog.csdn.net/sinat_38682860/article/details/102798114">原文链接</a></p>
-<p><strong>第二种问题:</strong><br>丢失cryptography模块<br>在cmd中输入<code>pip install cryptography</code>即可</p>
-<p><a href="https://blog.csdn.net/weixin_43978056/article/details/105940157">原文链接</a></p>
-</blockquote>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>杂</category>
-      </categories>
-      <tags>
-        <tag>杂</tag>
       </tags>
   </entry>
   <entry>
@@ -393,6 +141,23 @@
       </tags>
   </entry>
   <entry>
+    <title>CTF学习笔记</title>
+    <url>/2021/05/27/CTF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>萌新的入坑记录而已</p>
+<span id="more"></span>
+<h1 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h1><h2 id="登录界面"><a href="#登录界面" class="headerlink" title="登录界面"></a>登录界面</h2><blockquote>
+<p>登录界面必然会与数据库进行交互，所以是SQL注入的经典位置</p>
+</blockquote>
+<p>常见登陆界面SQL语句<code>select * from admin where username = &#39;用户输入的用户名&#39; and password = &#39;用户输入的密码&#39;</code><br>万能用户名:<code>&#39; or 1=1 -- </code>     (<code>-- </code>后面有一个空格)<br>第一个<code>&#39;</code>用于闭合SQL语句用户名的单引号，<code>1=1</code>永远为真，<code>-- </code>用于注释其后的密码语句，从而绕过登录验证 </p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>课程设计</title>
     <url>/2021/05/25/%E8%AF%BE%E7%A8%8B%E8%AE%BE%E8%AE%A1/</url>
     <content><![CDATA[<blockquote>
@@ -418,5 +183,240 @@
       <tags>
         <tag>C++</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>计算机科学导论课程学习报告</title>
+    <url>/2021/04/20/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6%E5%AF%BC%E8%AE%BA%E8%AF%BE%E7%A8%8B%E5%AD%A6%E4%B9%A0%E6%8A%A5%E5%91%8A/</url>
+    <content><![CDATA[<blockquote>
+<p>此文为大一上计算机科学概论课程结课论文，为纪念第一次完成数千字的论文，防止不慎弄丢，因此上传至博客，没啥水平，仅作纪念</p>
+</blockquote>
+<span id="more"></span>
+<h1 id="计算机科学导论课程学习报告"><a href="#计算机科学导论课程学习报告" class="headerlink" title="计算机科学导论课程学习报告"></a>计算机科学导论课程学习报告</h1><h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>摘要：继19世纪查尔斯·巴贝奇发明可编程的分析机以来，计算机已经经过了两个世纪的发展。而在计算机高速发展的同时，信息安全也成了每个人不得不重视的问题。通过对计算机科学导论课程的学习，我对于信息安全及计算机组成的见解如下。</p>
+<h2 id="关键词"><a href="#关键词" class="headerlink" title="关键词"></a>关键词</h2><p>关键词：计算机 信息安全 硬件系统 操作系统 网络 数据库 程序设计语言 算法  </p>
+<h2 id="一、引言"><a href="#一、引言" class="headerlink" title="一、引言"></a>一、引言</h2><p>一、引言<br>继19世纪查尔斯·巴贝奇发明可编程的分析机以来，计算机已经经过了两个世纪的发展。1946年诞生的基于二进制的ENIAC，后又改进为冯·诺依曼结构，奠定了未来计算机的基础；1958年，罗伯特·诺伊斯发明了集成电路推动了第三代计算机的发展；1971年，Kenbak公司推出了Kenbak-1，世界上第一台个人PC，计算机从此开始逐渐走进千家万户；1969年，因特网诞生；1989年，英国科学家蒂姆·伯纳斯-李发明了万维网；随着因特网的快速发展，大量的局域网和个人计算机用户接入，世界通过计算机连接在了一起，构成了地球村。</p>
+<p>而在计算机高速发展的同时，信息安全也成了每个人不得不重视的问题。作为新时代计算机信息安全专业的学生，我们不仅要学习信息安全方面的知识，更要了解计算机的基础结构、工作原理等。</p>
+<h2 id="二、信息安全"><a href="#二、信息安全" class="headerlink" title="二、信息安全"></a>二、信息安全</h2><p>二、信息安全<br>21 世纪是信息的时代。一方面，信息技术伴随计算机的高速发展而迅速壮大，呈现出空前繁荣的景象，另一方面, 危害信息安全的事件不断发生，2016年8月的徐玉玉案，2016年9月Mirai开启僵尸物联网时代，2017年4月“永恒之蓝”勒索病毒在全球范围内爆发……信息安全事关社会稳定和国家安全，为应对新时代愈发严重的信息安全问题，我国于2017年6月1日开始实行《中华人民共和国网络安全法》以确保公民及国家的信息安全。信息安全主要包括以下 4 个方面：信息设备安全、数据安全、内容安全和行为安全，信息系统硬件结构的安全和操作系统的安全是信息系统安全的基础，密码、网络安全等技术是关键技术，只有从信息系统的硬件和软件的底层采取安全措施，从整体上采取措施，才能比较有效地确保信息系统的安全[1]。</p>
+<p>在这个技术日新月异的新时代，有木马，有病毒，有Dos攻击，甚至量子计算机也在逐渐的开发中，当这种运算速度远强于传统计算机的工具诞生，届时受到严重威胁的将是整个世界的信息安全，而我们学习信息安全方面的知识，就走在构建信息安全的社会的道路上。在现在这个信息发达，能力者众多的时代，我们若想为构建信息安全社会贡献一份力量，就要加强在这方面的知识能力和认知，多了解国内外信息安全案例，分析导致问题的原因，安全隐患，威胁程度等，并构想该从何去避免此问题发生或解决此问题。</p>
+<h2 id="三、浅析计算机"><a href="#三、浅析计算机" class="headerlink" title="三、浅析计算机"></a>三、浅析计算机</h2><p>三、浅析计算机</p>
+<h3 id="计算机硬件系统的结构和工作过程"><a href="#计算机硬件系统的结构和工作过程" class="headerlink" title="计算机硬件系统的结构和工作过程"></a>计算机硬件系统的结构和工作过程</h3><p>计算机硬件系统的结构和工作过程：<br>计算机硬件系统为冯·诺依曼结构，分为存储器、运算器、控制器、输入设备和输出设备。</p>
+<p>计算机由许多小型电子电路构成门，通过这些电路的电压电平来表示0和1进行布尔运算，而多个门又构成了触发器电路，触发器是计算机存储器的基本部件。超大规模集成（VLSI）技术将数百万个电子元件构造在芯片上，从而创建出包含数百万个触发器及其控制电路的微型设备。存储器是一种利用半导体、磁性介质等技术制成的存储资料的电子设备，其电子电路中的资料以二进制方式存储。存储器可分为内部存储器（即主存储器）和外部存储器。计算机包含了大量如触发器的电路用于存储数据，每一个电路能存储一个位，这种位存储器就是计算机的主存储器。为了区分计算机主存储器中的个存储单元，每个存储单元都被赋予了唯一的“名字”，即地址[2]，CPU可以直接通过寻址找到主存中的内容。内部存储器的特点是读写速度快，但缺点就是具有一定的不稳定性且容量较小，因此有了容量大且更稳定的外部存储器，例如硬盘、CD盘、DVD盘等。机械硬盘、CD盘、DVD盘等外部存储器都是通过高速旋转存储盘来进行读写数据，基于磁技术和光技术的外部存储器读写数据一般通过机械运动来实现，因此有着读写速度慢甚至机械元件易故障的缺点，而闪存技术就解决了这个问题，在闪存系统中，二进制位是由电子信号直接发送到存储介质中的，电子信号使该介质中的二氧化硅微小晶格截获电子，从而转换微电子电路的性质进行存储[2]。与磁系统和光系统不同，闪存对物理震动不敏感，因此，基于闪存技术的固态硬盘已逐步取代了基于磁系统的机械硬盘。</p>
+<p>计算机中执行各种算数和逻辑运算的部件被称为运算器，可以执行加、减、乘、除四则运算及与、或、非、异或等逻辑操作。运算器由算数逻辑单元（ALU）、累加器、状态寄存器、通用寄存器等组成。运算器的操作和操作种类由控制器决定，而处理的数据来自存储器，处理后的结果或送回寄存器，或寄存在运算器中。</p>
+<p>计算机中按照预定顺序改变主电路或控制电路中电阻值来控制电动机的启动、调速、制动和反向的主令装置被称为控制器，由程序计数器、指令寄存器、指令译码器、时序产生器和操作控制器组成，是发布命令的“决策机构”，即完成协调和指挥整个计算机系统的操作。控制器是用来处理计算机与其他设备的通信的中间设备，是通过电缆与计算机机箱里的外围设备或者是与计算机背面的端口相连接的。<br>输入设备是向计算机输入数据和信息的设备，是计算机与用户或其他设备通信的桥梁，是用户和计算机系统之间进行信息交换的主要装置之一，包括键盘、鼠标等。</p>
+<p>输出设备是计算机硬件系统的终端设备，用于接收计算机数据的输出显示、打印、声音、控制外围设备操作等，可以把各种计算结果数据或信息以数字、字符、图像、声音等形式表现出来，例如显示器、打印机、影像输出系统、语音输出系统等。</p>
+<h3 id="操作系统、计算机网络及数据库管理系统"><a href="#操作系统、计算机网络及数据库管理系统" class="headerlink" title="操作系统、计算机网络及数据库管理系统"></a>操作系统、计算机网络及数据库管理系统</h3><p>操作系统、计算机网络及数据库管理系统：<br>操作系统（OS）是管理计算机硬件与软件资源的计算机程序，是计算机最基本也是最为重要的基础性系统软件，例如最著名的Windows、Linux等，操作系统需要处理如管理与配置内存、决定系统资源供需的优先次序、控制输入输出设备、操作网络与管理文件系统等基本事务，用于提供给用户一个与系统交互的操作界面。操作系统通常由用户界面和内核组成，用户界面负责与用户进行通信，内核包含着完成计算机安装所需的极基本功能的软件组件。用户通过操作系统的协调与计算机进行交互。</p>
+<p>计算机网络，简称为网络，是指容许节点分享资源的数字电信网络。计算机网络通常分为个域网（PAN）、局域网（LAN）、城域网（MAN）和广域网（WAN）。为了网络运行可靠而建立的用于管理网络活动的规则被称为协议，由于因特网为开放式网络，所以需要一些通过一些标准才能使不同厂商的设备和软件一起正常运行，TCP/IP协议簇是因特网所使用的协议标准的集合。一个因特网需要一个互联网范围的编址系统，为该系统内的每台计算机分配一个唯一的标识地址，即IP地址，但由于此种以位模式表示的地址难以记忆，因此出现了另一种基于域的编制系统，域名是由一串用点分隔的名字组成的因特网上某一台计算机或计算机组的名称，用于在数据传输时标识计算机的电子方位[4]，然后通过DNS服务器解析域名得到IP地址。万维网面世后，这种域名编制系统得到了广泛应用，人们通过URL即可快速访问服务器获取信息。</p>
+<p>数据库是指一种多维的数据集合，不同于一维的平面文件只能从一个角度来展示信息，在数据库中可以通过多个数据项之间的内部链接从多个角度来获取信息。数据库管理系统是一种操纵和管理数据库的大型软件，用于建立、使用和维护数据库，它对数据库进行统一的管理和控制，以保证数据库的安全性和完整性[5]。</p>
+<h3 id="程序设计语言及算法"><a href="#程序设计语言及算法" class="headerlink" title="程序设计语言及算法"></a>程序设计语言及算法</h3><p>程序设计语言及算法：<br>程序设计语言是用来定义计算机程序的形式语言。它是一种被标准化的交流技巧，用来向计算机发出指令。一种能够让程序员准确地定义计算机所需要使用数据的计算机语言，并精确地定义在不同情况下所应当采取的行动。语言的基础是一组记号和一组规则，根据规则由记号构成的记号串的总体就是程序。程序设计语言的描述一般可以分为语法及语义。语法是说明编程语言中，哪些符号或文字的组合方式是正确的，语义则是对于编程的解释[3]。虽然程序设计语言的种类千差万别，但一般基本成分分为四种，数据成分：用以描述程序中所涉及的数据；运算成分：用以描述程序中所包含的运算；控制成分：用以表达程序中的控制构造；传输成分：用以表达程序中数据的传输。从发展历程来看，程序设计语言可分为四代。第一代机器语言，机器语言由二进制0、1代码指令构成，不同的CPU具有不同的指令系统，机器语言程序难编写、难修改、难维护，且编程效率极低，已渐渐被淘汰。第二代汇编语言，汇编语言指令是机器指令的符号化，与机器指令存在着直接的对应关系，同样的汇编语言同样存在难学难用、容易出错、维护困难等缺点。但其也存在自己的优点，可以直接访问系统接口，汇编语言翻译成的机器语言程序的效率高。第三代高级语言，高级语言是面向用户的、基本上独立于计算机种类和结构的语言。其最大的优点就是形式上接近算术语言和自然语言，概念上接近于人们通常使用的概念。因此，高级语言易学易用，通用性强，应用广泛。</p>
+<p>算法是一组明确的、可执行的步骤的有序集合，在有限的时间内终止并产生结果。算法是用来计算的工具，算法的核心是创建问题抽象的模型和明确求解目标，之后可以根据具体的问题选择不同的模式和方法完成算法的设计。在计算机科学中有许多便捷的算法，在处理问题时选对算法会使解决过程变得更加简洁。</p>
+<h2 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h2><p>四、总结<br>21世纪是信息高度发达的时代，因此信息的重要性非同以往，要构建信息安全的社会还很遥远，可能需要多代人的努力，而现今的接力棒就握在我们手中，社会更需要的是多方面的人才，不仅要学习信息方面的知识，计算机基础理论知识等同样不能舍弃。</p>
+<h2 id="参-考-文-献"><a href="#参-考-文-献" class="headerlink" title="参   考   文   献"></a>参   考   文   献</h2><p>[1]    沈昌祥，张焕国，冯登国，曹珍富，黄继武 . 信息安全综述[J]. 中国科学E辑：信息科学. 2007,第37卷（2）：129~150<br>[2]    刘艺，吴英，毛倩倩（译）. 计算机科学概论[M]. 第12版. 北京：人民邮电出版社，2017<br>[3]    范国泰. 语言系统简介[EB/OL]. <a href="https://web.archive.org/">https://web.archive.org</a>，2014-06-05<br>[4]    谢从华，高蕴梅，黄晓华. Web系统与技术[M]. 北京：清华大学出版社，2018<br>[5]    赵静. 数据库管理系统的现状及发展方向[J]. 电脑编程技巧与维护. 2009，12</p>
+]]></content>
+      <categories>
+        <category>计算机科学</category>
+      </categories>
+      <tags>
+        <tag>计算机科学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git学习记录</title>
+    <url>/2021/04/17/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="Git学习记录"><a href="#Git学习记录" class="headerlink" title="Git学习记录"></a>Git学习记录</h1><p>萌新在线嘤嘤嘤</p>
+<span id="more"></span>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ol>
+<li><code>git clone URL</code><blockquote>
+<p>从该URL下载文件</p>
+</blockquote>
+<ul>
+<li><code>git clone --depth 1 URL</code><blockquote>
+<p>从该URL下载最新版本文件</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Web-wp</title>
+    <url>/2021/04/16/Web-wp/</url>
+    <content><![CDATA[<p>歪脖的达不溜屁</p>
+<span id="more"></span>
+
+<h1 id="ctfshow"><a href="#ctfshow" class="headerlink" title="ctfshow"></a>ctfshow</h1><h2 id="web入门"><a href="#web入门" class="headerlink" title="web入门"></a>web入门</h2><h3 id="信息搜集"><a href="#信息搜集" class="headerlink" title="信息搜集"></a>信息搜集</h3><h4 id="web1"><a href="#web1" class="headerlink" title="web1"></a>web1</h4><p>简单的f12</p>
+<h4 id="web2"><a href="#web2" class="headerlink" title="web2"></a>web2</h4><p>打开页面提示无法查看源代码 迷惑.jpg</p>
+<p>我一下就打开了，很快啊</p>
+<p>看了下hint，get新知识，在URL头部添加<code>view-source:</code>即可查看源码</p>
+<p>（原来是禁用了右键，习惯用快捷键真是不好意西:-)</p>
+<h4 id="web3"><a href="#web3" class="headerlink" title="web3"></a>web3</h4><p>bp抓包，flag在返回包里</p>
+<h4 id="web4"><a href="#web4" class="headerlink" title="web4"></a>web4</h4><p>打开robots.txt，得到一个flagishere.txt，打开<code>/flagishere.txt</code>，得到flag</p>
+<h4 id="web5"><a href="#web5" class="headerlink" title="web5"></a>web5</h4><p>在URL尾部输入<code>/index.phps</code>，得到phps文件，打开得到flag</p>
+<h4 id="web6"><a href="#web6" class="headerlink" title="web6"></a>web6</h4><p>提示应该是源码泄露，用dirsearch扫了一下发现<code>www.zip</code>，下载到本地得到一个fl000g.txt文件，打开得到个flag{flag_here}，提交错误</p>
+<p>…原来是个假flag，在URL尾部输入<code>/fl000g.txt</code>得到真flag</p>
+<h4 id="web7"><a href="#web7" class="headerlink" title="web7"></a>web7</h4><p>根据提示感觉应该是git泄露，URL尾部添加<code>/.git/</code>，得到flag</p>
+<h4 id="web8"><a href="#web8" class="headerlink" title="web8"></a>web8</h4><p>git泄露都考了，应该就是svn了，URL尾部添加<code>/.svn/</code>，得到flag</p>
+<h1 id="bugku"><a href="#bugku" class="headerlink" title="bugku"></a>bugku</h1><h2 id="web1-1"><a href="#web1-1" class="headerlink" title="web1"></a>web1</h2><p>…滑稽脸<br><img src="https://z3.ax1x.com/2021/04/16/cf8LQK.jpg" style="zoom: 25%;"><br>F12打开源码，找到flag</p>
+<h2 id="web2-1"><a href="#web2-1" class="headerlink" title="web2"></a>web2</h2><p>是一个填写验证码的输入框，然后发现无法输入两个字符，F12审查元素，果然输入框限制了maxlength，修改maxlength为2即可</p>
+<h2 id="web3-1"><a href="#web3-1" class="headerlink" title="web3"></a>web3</h2><p>打开场景是一段PHP代码，</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$what</span>=<span class="variable">$_GET</span>[<span class="string">&#x27;what&#x27;</span>];</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$what</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$what</span>==<span class="string">&#x27;flag&#x27;</span>)</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;flag&#123;****&#125;&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>审计，是要通过get的方式提交一个变量<code>what=flag</code>，<br>在地址栏输入<code>http://114.67.246.176:16477/?what=flag</code>即可得到flag</p>
+<h2 id="web4-1"><a href="#web4-1" class="headerlink" title="web4"></a>web4</h2><p>打开场景又是一段PHP代码，</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$what</span>=<span class="variable">$_POST</span>[<span class="string">&#x27;what&#x27;</span>];</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$what</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$what</span>==<span class="string">&#x27;flag&#x27;</span>)</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;flag&#123;****&#125;&#x27;</span>;</span><br></pre></td></tr></table></figure>
+<p>审计，是要通过post的方式提交一个变量<code>what=flag</code>,通过hackbar post一下即可</p>
+<h2 id="web5-1"><a href="#web5-1" class="headerlink" title="web5"></a>web5</h2><p>打开场景又是一段PHP代码，</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="variable">$num</span>=<span class="variable">$_GET</span>[<span class="string">&#x27;num&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(!is_numeric(<span class="variable">$num</span>))</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$num</span>;</span><br><span class="line"><span class="keyword">if</span>(<span class="variable">$num</span>==<span class="number">1</span>)</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;flag&#123;**********&#125;&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>审计，是弱类型比较，要求num变量既不是数字又满足等于1的条件，所以在1后面加一个字母即可<br>通过get方式提交<code>http://114.67.246.176:12222/?num=1a</code><br>得到flag</p>
+<h2 id="web6-1"><a href="#web6-1" class="headerlink" title="web6"></a>web6</h2><p>打开场景一堆弹窗，关都关不完，查看网页源码，<br><img src="https://z3.ax1x.com/2021/04/13/cyMAh9.png" style="zoom:33%;"><br>…发现写了一堆alert…绝了<br>在最下面发现了注释掉的编码，<br><img src="https://z3.ax1x.com/2021/04/13/cyMunK.png" style="zoom: 33%;"><br>查了一下是Unicode编码，通过工具Unicode转ASCII得到flag</p>
+<h2 id="web7-1"><a href="#web7-1" class="headerlink" title="web7"></a>web7</h2><p>弹窗提示停止网页刷新可得到flag<br>查看网页源代码，发现<br><img src="https://z3.ax1x.com/2021/04/20/cH8KiT.jpg" style="zoom: 50%;"><br>并且前面的图片命名为num.jpg，于是尝试刷新，发现图片num确实随着刷新改变，然后不断刷新，最后在一次刷新后圈圈的地方出现flag</p>
+<h2 id="web8-1"><a href="#web8-1" class="headerlink" title="web8"></a>web8</h2><blockquote>
+<p>PHP暂略</p>
+</blockquote>
+<h2 id="web9"><a href="#web9" class="headerlink" title="web9"></a>web9</h2><blockquote>
+<p>PHP暂略</p>
+</blockquote>
+<h2 id="web-10"><a href="#web-10" class="headerlink" title="web 10"></a>web 10</h2><p>打开页面显示什么也没有？信个鬼<br>根据描述头等舱，联想到消息头，BP抓包，在消息头中得到flag</p>
+<h1 id="ctfhub"><a href="#ctfhub" class="headerlink" title="ctfhub"></a>ctfhub</h1><h2 id="web前置技能"><a href="#web前置技能" class="headerlink" title="web前置技能"></a>web前置技能</h2><h3 id="HTTP协议"><a href="#HTTP协议" class="headerlink" title="HTTP协议"></a>HTTP协议</h3><h4 id="请求方式"><a href="#请求方式" class="headerlink" title="请求方式"></a>请求方式</h4><p>HTTP/1.1 八种请求方式: GET,POST,HEAD,OPTIONS,PUT,DELETE,TRACE,CONNECT</p>
+<p>打开环境提示HTTP方法为GET，使用CTFHUB方法，我会给你flag</p>
+<p>bp抓包改包重放，得到flag</p>
+<h4 id="302跳转"><a href="#302跳转" class="headerlink" title="302跳转"></a>302跳转</h4><p>看了wp才做出来</p>
+<p>打开环境，点击got flag后没反应，f12查看新出现了一个302的index.php页面，使用curl工具<code>-v</code>参数输出通信的整个过程，得到flag</p>
+<h4 id="cookie"><a href="#cookie" class="headerlink" title="cookie"></a>cookie</h4><p>打开环境提示管理员才能得到flag</p>
+<p>使用EditThisCookie查看，有一个名为admin的cookie值为0，修改为1，刷新得到flag</p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NUAA CTF 2021 Web Write up</title>
+    <url>/2021/04/10/NUAA%20CTF%202021%20WP/</url>
+    <content><![CDATA[<h1 id="NUAA-CTF-2021-Web-Write-up"><a href="#NUAA-CTF-2021-Web-Write-up" class="headerlink" title="NUAA CTF 2021 Web Write up"></a>NUAA CTF 2021 Web Write up</h1><p>第一场正式的的CTF比赛WP</p>
+<span id="more"></span>
+
+<h2 id="签到题"><a href="#签到题" class="headerlink" title="签到题"></a>签到题</h2><p>打开环境，查看网页源代码，即发现flag<br><img src="https://img-blog.csdnimg.cn/20210328195900666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_20,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="DDoSme"><a href="#DDoSme" class="headerlink" title="DDoSme"></a>DDoSme</h2><p>打开环境，提示Do you kNow .swp file? 直接百度，查到<br><img src="https://img-blog.csdnimg.cn/20210328204502583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>于是知道会要用到Linux<br>用dirsearch扫一下网站目录，发现了.index.php.swp文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20210328204551203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>地址栏URL后面输入<code>.index.php.swp</code>下载swp文件<br>这个时候用notepad打开发现全是乱码，百度发现<br><img src="https://img-blog.csdnimg.cn/20210328200950634.png"></p>
+<p>于是复制到Linux虚拟机中，</p>
+<p><img src="https://img-blog.csdnimg.cn/20210328204652570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>再<br><img src="https://img-blog.csdnimg.cn/20210328201104698.png" alt="在这里插入图片描述"></p>
+<p>得到还原后的PHP文件</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">areyouok</span>(<span class="params"><span class="variable">$greeting</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> preg_match(<span class="string">&#x27;/Baby.*PHP/is&#x27;</span>,<span class="variable">$greeting</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$greeting</span>=@<span class="variable">$_POST</span>[<span class="string">&#x27;greeting&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(!is_array(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">    <span class="keyword">if</span>(!areyouok(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">        <span class="keyword">if</span>(strpos(<span class="variable">$greeting</span>,<span class="string">&#x27;Baby PHP&#x27;</span>)!==<span class="literal">false</span>)&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;flag&#123;xxxxxx&#125;&#x27;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;Do you kNow .swp file?&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&#x27;Do you know PHP?&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>emmm…PHP学的还不多，看不懂，果断度娘，发现……竟然跟18年i春秋圣诞欢乐赛题一样…原理就是pcre具有回溯上限，当回溯超过上限时返回 false，从而绕过正则匹配函数(虽然俺不懂，但俺会CV大法)<br>链接:<a href="https://www.jianshu.com/p/68f3c8e5d2b4">2018年i春秋圣诞欢乐赛Web WP</a><br>然后通过Python写个脚本：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line"></span><br><span class="line">files = &#123;</span><br><span class="line">  <span class="string">&#x27;greeting&#x27;</span>:(<span class="string">&#x27;Baby PHP&#x27;</span> + <span class="string">&#x27;a&#x27;</span> * <span class="number">1000000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">res = requests.post(<span class="string">&#x27;http://server.cooook.icu:10003/index.php&#x27;</span>, data=files, allow_redirects=<span class="literal">False</span>)</span><br><span class="line">print(res.text)</span><br></pre></td></tr></table></figure>
+<p>运行之后，成功拿到flag</p>
+<p><img src="https://img-blog.csdnimg.cn/20210328204722851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="easy-xss"><a href="#easy-xss" class="headerlink" title="easy_xss"></a>easy_xss</h2><p>看题目知道是xss跨站脚本漏洞攻击<br>题目要求是：<br><img src="https://img-blog.csdnimg.cn/20210328201752270.png" alt="在这里插入图片描述"><br>扫了下网站<br><img src="https://img-blog.csdnimg.cn/20210328201935905.png" alt="在这里插入图片描述"><br>看到了upload.php，试了一下emmm确实打不开<br>所以要登入管理员界面，xss攻击，想到了窃取cookie绕过登录，<br>而且正好点开Read sample post出现了管理员发表的文章</p>
+<p>然后..就卡住了(っ °Д °)っ<br><img src="https://img-blog.csdnimg.cn/20210328204809754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="base64"><a href="#base64" class="headerlink" title="base64"></a>base64</h2><p><img src="https://img-blog.csdnimg.cn/2021032821021262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210328210244539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_48,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>emmm……PHP，Base64，这俩合一起….看了度娘都看不懂…毫无思路</p>
+<p>比完赛，感觉 我是废物（；´д｀）ゞ</p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>注册表大法</title>
+    <url>/2021/04/06/%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%A4%A7%E6%B3%95/</url>
+    <content><![CDATA[<p>注册表大法DIY电脑永远滴神</p>
+<span id="more"></span>
+<h1 id="CMD窗口修改字体"><a href="#CMD窗口修改字体" class="headerlink" title="CMD窗口修改字体"></a>CMD窗口修改字体</h1><blockquote>
+<p>CMD默认字体颜值无力吐槽，甚至还有1和l、0和o分不清的问题，于是打算修改一下，添加consolas字体</p>
+</blockquote>
+<h2 id="打开注册表编辑器"><a href="#打开注册表编辑器" class="headerlink" title="打开注册表编辑器"></a>打开注册表编辑器</h2><p>首先<code>win+r</code>,<code>regedit</code>打开</p>
+<h2 id="找到修改路径"><a href="#找到修改路径" class="headerlink" title="找到修改路径"></a>找到修改路径</h2><p>打开路径<code>计算机\HKEY_CURRENT_USER\Console</code><br>再打开<code>%SystemRoot%_system32_cmd.exe</code>项<br>将<code>CodePage</code>键值十进制修改为<code>437</code><br><del>&gt; 同理，修改Dev-C++窗口的字体，只需打开<code>D:_Dev-Cpp_ConsolePauser.exe</code>项，修改键值即可</del><br>不要这么改！o(￣┰￣*)ゞ<br>导致了我不知道为什么编译不了程序，于是重做了一遍系统…</p>
+]]></content>
+      <categories>
+        <category>DIY</category>
+      </categories>
+      <tags>
+        <tag>DIY</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>问题簿</title>
+    <url>/2021/04/05/%E9%97%AE%E9%A2%98%E7%B0%BF/</url>
+    <content><![CDATA[<p>记录遇到的一些有参考性的问题</p>
+<span id="more"></span>
+<h1 id="2021"><a href="#2021" class="headerlink" title="2021"></a>2021</h1><h2 id="01-03"><a href="#01-03" class="headerlink" title="01~03"></a>01~03</h2><ol>
+<li>搭建博客过程中更换next主题上传出现大量报错: <blockquote>
+<p>检查发现是因为next的github地址更换，导致git命令执行失败<br>更换后的URL: <a href="https://github.com/theme-next/hexo-theme-next">https://github.com/theme-next/hexo-theme-next</a></p>
+</blockquote>
+</li>
+<li>kali配置静态IP后无法重启网络服务: <blockquote>
+<p>翻了大量的帖子后解决了问题<br><code>root@test:~# ip addr flush dev eth0 &amp;&amp; /etc/init.d/networking restart</code><br>执行此指令后，网络服务重启成功<br>原帖: <a href="https://blog.csdn.net/w294954902/article/details/82628909">https://blog.csdn.net/w294954902/article/details/82628909</a></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="04"><a href="#04" class="headerlink" title="04"></a>04</h2><ol>
+<li>重新搭建博客过程中上传文件出现大量报错: <blockquote>
+<p>发现原来是因为更改了站点配置文件中的timezone<br>orz 就因为我没事闲的把时区改成了Asia/Beijing<br>经改为Asia/Shanghai后上传，已恢复正常</p>
+</blockquote>
+</li>
+<li>创建新文章时上传文件卡住，显示ssh密钥连接不上，又ping了一下github，发现连接不上: <blockquote>
+<p>找了一下原因…原来是因为前一阵github被墙了，我就在host文件里添加了github的解析，在测试此方法无效后未删除…<br>删了那些解析后成功连接github，并且博客也可正常登录</p>
+</blockquote>
+</li>
+<li>为博客添加访问量统计功能出现错误:<blockquote>
+<p>统计功能采用的是不蒜子，搜了一下发现，原来是因为不蒜子官网的域名过期了，所以URL错误…<br>将<code>themes\next\layout\_partials</code>中<code>footer.swig</code>文件添加的</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.footer.counter %&#125;</span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">&quot;//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>改为</p>
+<figure class="highlight django"><table><tr><td class="code"><pre><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">if</span></span> theme.footer.counter %&#125;</span></span><br><span class="line"><span class="xml">   <span class="tag">&lt;<span class="name">script</span> <span class="attr">async</span> <span class="attr">src</span>=<span class="string">&quot;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="template-tag">&#123;% <span class="name"><span class="name">endif</span></span> %&#125;</span></span><br></pre></td></tr></table></figure>
+<p>官方通知: <a href="http://ibruce.info/2015/04/04/busuanzi/">http://ibruce.info/2015/04/04/busuanzi/</a></p>
+</blockquote>
+</li>
+</ol>
+<h2 id="05"><a href="#05" class="headerlink" title="05"></a>05</h2><ol>
+<li>电脑重做了系统之后，之前用的dirsearch突然用不了了，各种报错，例如<br><img src="https://z3.ax1x.com/2021/05/18/ghYPII.jpg"><br>和这样<br><img src="https://z3.ax1x.com/2021/05/18/ghYCdA.jpg"><br>因为扫不了网站目录，导致我好一段时间冷落了靶场(才不是因为懒(/▽＼)<br>后来问了道长，道长说是Python库丢失了，于是Baiduing···<blockquote>
+<p><strong>第一种问题:</strong><br>丢失了type库</p>
+<figure class="highlight haskell"><table><tr><td class="code"><pre><span class="line"><span class="title">try</span>:</span><br><span class="line">   <span class="keyword">import</span> requests</span><br><span class="line">	except <span class="type">ImportError</span>:</span><br><span class="line">   <span class="keyword">import</span> os</span><br><span class="line">   os.system(&#x27;pip install <span class="class"><span class="keyword">type</span>&#x27;)</span></span><br><span class="line">   <span class="keyword">import</span> requests</span><br></pre></td></tr></table></figure>
+<p>补充type库</p>
+<p><a href="https://blog.csdn.net/sinat_38682860/article/details/102798114">原文链接</a></p>
+<p><strong>第二种问题:</strong><br>丢失cryptography模块<br>在cmd中输入<code>pip install cryptography</code>即可</p>
+<p><a href="https://blog.csdn.net/weixin_43978056/article/details/105940157">原文链接</a></p>
+</blockquote>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>杂</category>
+      </categories>
+      <tags>
+        <tag>杂</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Kali学习记录</title>
+    <url>/2021/04/03/Kali%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="Kali"><a href="#Kali" class="headerlink" title="Kali"></a>Kali</h1><p>犯罪记录(x)</p>
+<span id="more"></span>
+<blockquote>
+<p>Kali学的好，牢饭吃到饱<br>这里是Kali学习记录<del>(犯罪日记)</del></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>CTF 渗透测试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>0x 00</title>
+    <url>/2021/04/02/0x00/</url>
+    <content><![CDATA[<h1 id="JUST-A-TEST"><a href="#JUST-A-TEST" class="headerlink" title="JUST A TEST!"></a>JUST A TEST!</h1>]]></content>
   </entry>
 </search>
