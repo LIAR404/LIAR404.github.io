@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>0x 00</title>
+    <url>/2021/04/02/0x00/</url>
+    <content><![CDATA[<h1 id="JUST-A-TEST"><a href="#JUST-A-TEST" class="headerlink" title="JUST A TEST!"></a>JUST A TEST!</h1>]]></content>
+  </entry>
+  <entry>
+    <title>CTF学习笔记</title>
+    <url>/2021/05/27/CTF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<p>萌新的入坑记录而已</p>
+<span id="more"></span>
+<h1 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h1><h2 id="登录界面"><a href="#登录界面" class="headerlink" title="登录界面"></a>登录界面</h2><blockquote>
+<p>登录界面必然会与数据库进行交互，所以是SQL注入的经典位置</p>
+</blockquote>
+<p>常见登陆界面SQL语句<code>select * from admin where username = &#39;用户输入的用户名&#39; and password = &#39;用户输入的密码&#39;</code><br>万能用户名:<code>&#39; or 1=1 -- </code>     (<code>-- </code>后面有一个空格)<br>第一个<code>&#39;</code>用于闭合SQL语句用户名的单引号，<code>1=1</code>永远为真，<code>-- </code>用于注释其后的密码语句，从而绕过登录验证 </p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>GKCTF × DASCTF 2021 WP</title>
     <url>/2021/06/26/GKCTF-%C3%97-DASCTF-2021-WP/</url>
     <content><![CDATA[<p>只有一道题</p>
@@ -34,28 +56,6 @@
 <p>编辑后返回前台得到flag</p>
 <img src="/2021/06/26/GKCTF-%C3%97-DASCTF-2021-WP/7.jpg" style="zoom: 25%;">
 
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>0x 00</title>
-    <url>/2021/04/02/0x00/</url>
-    <content><![CDATA[<h1 id="JUST-A-TEST"><a href="#JUST-A-TEST" class="headerlink" title="JUST A TEST!"></a>JUST A TEST!</h1>]]></content>
-  </entry>
-  <entry>
-    <title>CTF学习笔记</title>
-    <url>/2021/05/27/CTF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<p>萌新的入坑记录而已</p>
-<span id="more"></span>
-<h1 id="SQL注入"><a href="#SQL注入" class="headerlink" title="SQL注入"></a>SQL注入</h1><h2 id="登录界面"><a href="#登录界面" class="headerlink" title="登录界面"></a>登录界面</h2><blockquote>
-<p>登录界面必然会与数据库进行交互，所以是SQL注入的经典位置</p>
-</blockquote>
-<p>常见登陆界面SQL语句<code>select * from admin where username = &#39;用户输入的用户名&#39; and password = &#39;用户输入的密码&#39;</code><br>万能用户名:<code>&#39; or 1=1 -- </code>     (<code>-- </code>后面有一个空格)<br>第一个<code>&#39;</code>用于闭合SQL语句用户名的单引号，<code>1=1</code>永远为真，<code>-- </code>用于注释其后的密码语句，从而绕过登录验证 </p>
 ]]></content>
       <categories>
         <category>CTF</category>
@@ -103,7 +103,7 @@
 <p><a href="ftp://ftp.is.co.za/rfc/rfc1808.txt">ftp://ftp.is.co.za/rfc/rfc1808.txt</a>   </p>
 <p><a href="http://www.ietf.org/rfc/rfc2396.txt">http://www.ietf.org/rfc/rfc2396.txt</a>    </p>
 <p>ldap://[2001:db8::7]/c=GB?objectClass?one    </p>
-<p>mailto:<a href="mailto:&#x4a;&#x6f;&#104;&#110;&#x2e;&#x44;&#x6f;&#101;&#x40;&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#109;">&#x4a;&#x6f;&#104;&#110;&#x2e;&#x44;&#x6f;&#101;&#x40;&#101;&#x78;&#x61;&#109;&#112;&#x6c;&#101;&#x2e;&#99;&#x6f;&#109;</a>    </p>
+<p>mailto:<a href="mailto:&#74;&#x6f;&#x68;&#x6e;&#46;&#x44;&#111;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#109;">&#74;&#x6f;&#x68;&#x6e;&#46;&#x44;&#111;&#x65;&#x40;&#101;&#120;&#97;&#x6d;&#x70;&#x6c;&#x65;&#46;&#x63;&#111;&#109;</a>    </p>
 <p>news:comp.infosystems.<a href="http://www.servers.unix/">www.servers.unix</a>    </p>
 <p>tel:+1-816-555-1212    </p>
 <p>telnet://192.0.2.16:80/    </p>
@@ -129,6 +129,54 @@
       <tags>
         <tag>CTF 渗透测试</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>NUAA CTF 2021 Web Write up</title>
+    <url>/2021/04/10/NUAA%20CTF%202021%20WP/</url>
+    <content><![CDATA[<h1 id="NUAA-CTF-2021-Web-Write-up"><a href="#NUAA-CTF-2021-Web-Write-up" class="headerlink" title="NUAA CTF 2021 Web Write up"></a>NUAA CTF 2021 Web Write up</h1><p>第一场正式的的CTF比赛WP</p>
+<span id="more"></span>
+
+<h2 id="签到题"><a href="#签到题" class="headerlink" title="签到题"></a>签到题</h2><p>打开环境，查看网页源代码，即发现flag<br><img src="https://img-blog.csdnimg.cn/20210328195900666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_20,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="DDoSme"><a href="#DDoSme" class="headerlink" title="DDoSme"></a>DDoSme</h2><p>打开环境，提示Do you kNow .swp file? 直接百度，查到<br><img src="https://img-blog.csdnimg.cn/20210328204502583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>于是知道会要用到Linux<br>用dirsearch扫一下网站目录，发现了.index.php.swp文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20210328204551203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>地址栏URL后面输入<code>.index.php.swp</code>下载swp文件<br>这个时候用notepad打开发现全是乱码，百度发现<br><img src="https://img-blog.csdnimg.cn/20210328200950634.png"></p>
+<p>于是复制到Linux虚拟机中，</p>
+<p><img src="https://img-blog.csdnimg.cn/20210328204652570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>再<br><img src="https://img-blog.csdnimg.cn/20210328201104698.png" alt="在这里插入图片描述"></p>
+<p>得到还原后的PHP文件</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">areyouok</span>(<span class="params"><span class="variable">$greeting</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> preg_match(<span class="string">&#x27;/Baby.*PHP/is&#x27;</span>,<span class="variable">$greeting</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$greeting</span>=@<span class="variable">$_POST</span>[<span class="string">&#x27;greeting&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(!is_array(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">    <span class="keyword">if</span>(!areyouok(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">        <span class="keyword">if</span>(strpos(<span class="variable">$greeting</span>,<span class="string">&#x27;Baby PHP&#x27;</span>)!==<span class="literal">false</span>)&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;flag&#123;xxxxxx&#125;&#x27;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;Do you kNow .swp file?&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&#x27;Do you know PHP?&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>emmm…PHP学的还不多，看不懂，果断度娘，发现……竟然跟18年i春秋圣诞欢乐赛题一样…原理就是pcre具有回溯上限，当回溯超过上限时返回 false，从而绕过正则匹配函数(虽然俺不懂，但俺会CV大法)<br>链接:<a href="https://www.jianshu.com/p/68f3c8e5d2b4">2018年i春秋圣诞欢乐赛Web WP</a><br>然后通过Python写个脚本：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line"></span><br><span class="line">files = &#123;</span><br><span class="line">  <span class="string">&#x27;greeting&#x27;</span>:(<span class="string">&#x27;Baby PHP&#x27;</span> + <span class="string">&#x27;a&#x27;</span> * <span class="number">1000000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">res = requests.post(<span class="string">&#x27;http://server.cooook.icu:10003/index.php&#x27;</span>, data=files, allow_redirects=<span class="literal">False</span>)</span><br><span class="line">print(res.text)</span><br></pre></td></tr></table></figure>
+<p>运行之后，成功拿到flag</p>
+<p><img src="https://img-blog.csdnimg.cn/20210328204722851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="easy-xss"><a href="#easy-xss" class="headerlink" title="easy_xss"></a>easy_xss</h2><p>看题目知道是xss跨站脚本漏洞攻击<br>题目要求是：<br><img src="https://img-blog.csdnimg.cn/20210328201752270.png" alt="在这里插入图片描述"><br>扫了下网站<br><img src="https://img-blog.csdnimg.cn/20210328201935905.png" alt="在这里插入图片描述"><br>看到了upload.php，试了一下emmm确实打不开<br>所以要登入管理员界面，xss攻击，想到了窃取cookie绕过登录，<br>而且正好点开Read sample post出现了管理员发表的文章</p>
+<p>然后..就卡住了(っ °Д °)っ<br><img src="https://img-blog.csdnimg.cn/20210328204809754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="base64"><a href="#base64" class="headerlink" title="base64"></a>base64</h2><p><img src="https://img-blog.csdnimg.cn/2021032821021262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210328210244539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_48,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>emmm……PHP，Base64，这俩合一起….看了度娘都看不懂…毫无思路</p>
+<p>比完赛，感觉 我是废物（；´д｀）ゞ</p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>杂记</title>
+    <url>/2021/04/17/%E6%9D%82%E8%AE%B0/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e022b5894217348190d43edd945b68d8be8cbc535146ba9b7dbf1c0cecf831b2">351274e506ceb21c1026bbf6d58125d7153f14cebb490764f31e5291b9e6e96889fac705c4d3f60a883d2278ce8542eb0ce146d5284e697709c288e0b53858732d2fb144f1a8ffbe9c3be66842828dc6895999c6ff7f6182cdb7eb981480504e8713356f87f4f119eb671b8fc97dea18</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
   </entry>
   <entry>
     <title>Web-wp</title>
@@ -184,54 +232,6 @@
       </tags>
   </entry>
   <entry>
-    <title>NUAA CTF 2021 Web Write up</title>
-    <url>/2021/04/10/NUAA%20CTF%202021%20WP/</url>
-    <content><![CDATA[<h1 id="NUAA-CTF-2021-Web-Write-up"><a href="#NUAA-CTF-2021-Web-Write-up" class="headerlink" title="NUAA CTF 2021 Web Write up"></a>NUAA CTF 2021 Web Write up</h1><p>第一场正式的的CTF比赛WP</p>
-<span id="more"></span>
-
-<h2 id="签到题"><a href="#签到题" class="headerlink" title="签到题"></a>签到题</h2><p>打开环境，查看网页源代码，即发现flag<br><img src="https://img-blog.csdnimg.cn/20210328195900666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_20,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="DDoSme"><a href="#DDoSme" class="headerlink" title="DDoSme"></a>DDoSme</h2><p>打开环境，提示Do you kNow .swp file? 直接百度，查到<br><img src="https://img-blog.csdnimg.cn/20210328204502583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>于是知道会要用到Linux<br>用dirsearch扫一下网站目录，发现了.index.php.swp文件</p>
-<p><img src="https://img-blog.csdnimg.cn/20210328204551203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>地址栏URL后面输入<code>.index.php.swp</code>下载swp文件<br>这个时候用notepad打开发现全是乱码，百度发现<br><img src="https://img-blog.csdnimg.cn/20210328200950634.png"></p>
-<p>于是复制到Linux虚拟机中，</p>
-<p><img src="https://img-blog.csdnimg.cn/20210328204652570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>再<br><img src="https://img-blog.csdnimg.cn/20210328201104698.png" alt="在这里插入图片描述"></p>
-<p>得到还原后的PHP文件</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">areyouok</span>(<span class="params"><span class="variable">$greeting</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> preg_match(<span class="string">&#x27;/Baby.*PHP/is&#x27;</span>,<span class="variable">$greeting</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$greeting</span>=@<span class="variable">$_POST</span>[<span class="string">&#x27;greeting&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(!is_array(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">    <span class="keyword">if</span>(!areyouok(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">        <span class="keyword">if</span>(strpos(<span class="variable">$greeting</span>,<span class="string">&#x27;Baby PHP&#x27;</span>)!==<span class="literal">false</span>)&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;flag&#123;xxxxxx&#125;&#x27;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;Do you kNow .swp file?&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&#x27;Do you know PHP?&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>emmm…PHP学的还不多，看不懂，果断度娘，发现……竟然跟18年i春秋圣诞欢乐赛题一样…原理就是pcre具有回溯上限，当回溯超过上限时返回 false，从而绕过正则匹配函数(虽然俺不懂，但俺会CV大法)<br>链接:<a href="https://www.jianshu.com/p/68f3c8e5d2b4">2018年i春秋圣诞欢乐赛Web WP</a><br>然后通过Python写个脚本：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line"></span><br><span class="line">files = &#123;</span><br><span class="line">  <span class="string">&#x27;greeting&#x27;</span>:(<span class="string">&#x27;Baby PHP&#x27;</span> + <span class="string">&#x27;a&#x27;</span> * <span class="number">1000000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">res = requests.post(<span class="string">&#x27;http://server.cooook.icu:10003/index.php&#x27;</span>, data=files, allow_redirects=<span class="literal">False</span>)</span><br><span class="line">print(res.text)</span><br></pre></td></tr></table></figure>
-<p>运行之后，成功拿到flag</p>
-<p><img src="https://img-blog.csdnimg.cn/20210328204722851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="easy-xss"><a href="#easy-xss" class="headerlink" title="easy_xss"></a>easy_xss</h2><p>看题目知道是xss跨站脚本漏洞攻击<br>题目要求是：<br><img src="https://img-blog.csdnimg.cn/20210328201752270.png" alt="在这里插入图片描述"><br>扫了下网站<br><img src="https://img-blog.csdnimg.cn/20210328201935905.png" alt="在这里插入图片描述"><br>看到了upload.php，试了一下emmm确实打不开<br>所以要登入管理员界面，xss攻击，想到了窃取cookie绕过登录，<br>而且正好点开Read sample post出现了管理员发表的文章</p>
-<p>然后..就卡住了(っ °Д °)っ<br><img src="https://img-blog.csdnimg.cn/20210328204809754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="base64"><a href="#base64" class="headerlink" title="base64"></a>base64</h2><p><img src="https://img-blog.csdnimg.cn/2021032821021262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210328210244539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_48,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>emmm……PHP，Base64，这俩合一起….看了度娘都看不懂…毫无思路</p>
-<p>比完赛，感觉 我是废物（；´д｀）ゞ</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>杂记</title>
-    <url>/2021/04/17/%E6%9D%82%E8%AE%B0/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="e022b5894217348190d43edd945b68d8be8cbc535146ba9b7dbf1c0cecf831b2">351274e506ceb21c1026bbf6d58125d7153f14cebb490764f31e5291b9e6e96889fac705c4d3f60a883d2278ce8542eb0ce146d5284e697709c288e0b53858732d2fb144f1a8ffbe9c3be66842828dc6895999c6ff7f6182cdb7eb981480504e8713356f87f4f119eb671b8fc97dea18</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">这里需要密码</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-  </entry>
-  <entry>
     <title>注册表大法</title>
     <url>/2021/04/06/%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%A4%A7%E6%B3%95/</url>
     <content><![CDATA[<p>注册表大法DIY电脑永远滴神</p>
@@ -247,63 +247,6 @@
       </categories>
       <tags>
         <tag>DIY</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>靶场实战记录</title>
-    <url>/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<p>渗透测试靶场练习</p>
-<span id="more"></span>
-
-<h1 id="pikachu靶场"><a href="#pikachu靶场" class="headerlink" title="pikachu靶场"></a>pikachu靶场</h1><h2 id="爆破练习"><a href="#爆破练习" class="headerlink" title="爆破练习"></a>爆破练习</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>“暴力破解”是一攻击具手段，在web攻击中，一般会使用这种手段对应用系统的认证信息进行获取。 其过程就是使用大量的认证信息在认证接口进行尝试登录，直到得到正确的结果。 为了提高效率，暴力破解一般会使用带有字典的工具来进行自动化操作</p>
-<p>理论上来说，大多数系统都是可以被暴力破解的，只要攻击者有足够强大的计算能力和时间，所以断定一个系统是否存在暴力破解漏洞，其条件也不是绝对的。 我们说一个web应用系统存在暴力破解漏洞，一般是指该web应用系统没有采用或者采用了比较弱的认证安全策略，导致其被暴力破解的“可能性”变的比较高。 这里的认证安全策略, 包括：</p>
-<p>1.是否要求用户设置复杂的密码；<br>2.是否每次认证都使用安全的验证码（想想你买火车票时输的验证码～）或者手机otp；<br>3.是否对尝试登录的行为进行判断和限制（如：连续5次错误登录，进行账号锁定或IP地址锁定等）；<br>4.是否采用了双因素认证；<br>等等…<br>千万不要小看暴力破解漏洞,往往这种简单粗暴的攻击方式带来的效果是超出预期的</p>
-<blockquote>
-<p>从来没有哪个时代的黑客像今天一样热衷于猜解密码 ——奥斯特洛夫斯基</p>
-</blockquote>
-<h3 id="基于表单的暴力破解"><a href="#基于表单的暴力破解" class="headerlink" title="基于表单的暴力破解"></a>基于表单的暴力破解</h3><img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/1.jpg" style="zoom:80%;">
-
-<p>一个登陆界面的表单，随便试试，然后BP抓包，发送到爆破模块，读字典爆破</p>
-<p>(离谱的是Chrome抓不了包，应该是localhost的问题，火狐通过<code>about:config</code>修改一下抓取localhost的设定就好了，应该是Chrome的问题)</p>
-<h3 id="验证码绕过-on-server"><a href="#验证码绕过-on-server" class="headerlink" title="验证码绕过(on server)"></a>验证码绕过(on server)</h3><h3 id="验证码绕过-on-client"><a href="#验证码绕过-on-client" class="headerlink" title="验证码绕过(on client)"></a>验证码绕过(on client)</h3><h2 id="XSS练习"><a href="#XSS练习" class="headerlink" title="XSS练习"></a>XSS练习</h2><h3 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h3><p>Cross-Site Scripting 简称为“CSS”，为避免与前端叠成样式表的缩写”CSS”冲突，故又称XSS。一般XSS可以分为如下几种常见类型：<br>  1.反射性XSS;<br>  2.存储型XSS;<br>  3.DOM型XSS;</p>
-<p>XSS漏洞一直被评估为web漏洞中危害较大的漏洞，在OWASP TOP10的排名中一直属于前三的江湖地位<br>XSS是一种发生在前端浏览器端的漏洞，所以其危害的对象也是前端用户<br>形成XSS漏洞的主要原因是程序对输入和输出没有做合适的处理，导致“精心构造”的字符输出在前端时被浏览器当作有效代码解析执行从而产生危害<br>因此在XSS漏洞的防范上，一般会采用“对输入进行过滤”和“输出进行转义”的方式进行处理:<br> 输入过滤：对输入进行过滤，不允许可能导致XSS攻击的字符输入;<br> 输出转义：根据输出点的位置对输出到前端的内容进行适当转义</p>
-<h3 id="反射型XSS-get"><a href="#反射型XSS-get" class="headerlink" title="反射型XSS(get)"></a>反射型XSS(get)</h3><img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/2.jpg" style="zoom:80%;">
-
-<p>是一个文本框，随便输一个测试功能正常</p>
-<img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/3.jpg" style="zoom:80%;">
-
-<p>输入特殊符号<code>&#39;</code> <code>&lt;</code>等发现无过滤</p>
-<p>尝试输入payload发现文本框限制了字符数</p>
-<p>审查元素修改一下<code>maxlength</code></p>
-<p>再输入payload:  <code>&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;</code></p>
-<img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/4.jpg" style="zoom:80%;">
-
-<p>成功触发XSS</p>
-<img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/5.jpg" style="zoom: 50%;">
-
-<p>ps: 或者直接在地址栏输入</p>
-<p><img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/6.jpg"></p>
-<p>也可以成功触发XSS</p>
-<h3 id="反射型XSS-post"><a href="#反射型XSS-post" class="headerlink" title="反射型XSS(post)"></a>反射型XSS(post)</h3><p>多一步登录的步骤</p>
-<p>登陆后文本框同上题</p>
-<p>同理输入payload，成功触发XSS</p>
-<h3 id="存储型XSS"><a href="#存储型XSS" class="headerlink" title="存储型XSS"></a>存储型XSS</h3><img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/7.jpg" style="zoom: 50%;">
-
-<p>是一个留言板，可以存入数据库，每次打开此页面都会显示之前的留言</p>
-<p>并且，经测试，发现输入特殊符号<code>&#39;</code> <code>&lt;</code>无过滤</p>
-<p>输入payload:  <code>&lt;script&gt;alert(&#39;存储型xss&#39;)&lt;/script&gt;</code></p>
-<img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/8.jpg" style="zoom: 80%;">
-
-<p>成功触发XSS，并且由于留言板写入数据库，每次打开此页面都会触发XSS</p>
-<img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/9.jpg" style="zoom:67%;">
-
-<h1 id="sqli-labs靶场"><a href="#sqli-labs靶场" class="headerlink" title="sqli-labs靶场"></a>sqli-labs靶场</h1><h1 id="DVWA靶场"><a href="#DVWA靶场" class="headerlink" title="DVWA靶场"></a>DVWA靶场</h1>]]></content>
-      <categories>
-        <category>渗透测试</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>渗透测试</tag>
       </tags>
   </entry>
   <entry>
@@ -390,6 +333,63 @@
       </categories>
       <tags>
         <tag>杂</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>靶场实战记录</title>
+    <url>/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<p>渗透测试靶场练习</p>
+<span id="more"></span>
+
+<h1 id="pikachu靶场"><a href="#pikachu靶场" class="headerlink" title="pikachu靶场"></a>pikachu靶场</h1><h2 id="爆破练习"><a href="#爆破练习" class="headerlink" title="爆破练习"></a>爆破练习</h2><h3 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h3><p>“暴力破解”是一攻击具手段，在web攻击中，一般会使用这种手段对应用系统的认证信息进行获取。 其过程就是使用大量的认证信息在认证接口进行尝试登录，直到得到正确的结果。 为了提高效率，暴力破解一般会使用带有字典的工具来进行自动化操作</p>
+<p>理论上来说，大多数系统都是可以被暴力破解的，只要攻击者有足够强大的计算能力和时间，所以断定一个系统是否存在暴力破解漏洞，其条件也不是绝对的。 我们说一个web应用系统存在暴力破解漏洞，一般是指该web应用系统没有采用或者采用了比较弱的认证安全策略，导致其被暴力破解的“可能性”变的比较高。 这里的认证安全策略, 包括：</p>
+<p>1.是否要求用户设置复杂的密码；<br>2.是否每次认证都使用安全的验证码（想想你买火车票时输的验证码～）或者手机otp；<br>3.是否对尝试登录的行为进行判断和限制（如：连续5次错误登录，进行账号锁定或IP地址锁定等）；<br>4.是否采用了双因素认证；<br>等等…<br>千万不要小看暴力破解漏洞,往往这种简单粗暴的攻击方式带来的效果是超出预期的</p>
+<blockquote>
+<p>从来没有哪个时代的黑客像今天一样热衷于猜解密码 ——奥斯特洛夫斯基</p>
+</blockquote>
+<h3 id="基于表单的暴力破解"><a href="#基于表单的暴力破解" class="headerlink" title="基于表单的暴力破解"></a>基于表单的暴力破解</h3><img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/1.jpg" style="zoom:80%;">
+
+<p>一个登陆界面的表单，随便试试，然后BP抓包，发送到爆破模块，读字典爆破</p>
+<p>(离谱的是Chrome抓不了包，应该是localhost的问题，火狐通过<code>about:config</code>修改一下抓取localhost的设定就好了，应该是Chrome的问题)</p>
+<h3 id="验证码绕过-on-server"><a href="#验证码绕过-on-server" class="headerlink" title="验证码绕过(on server)"></a>验证码绕过(on server)</h3><h3 id="验证码绕过-on-client"><a href="#验证码绕过-on-client" class="headerlink" title="验证码绕过(on client)"></a>验证码绕过(on client)</h3><h2 id="XSS练习"><a href="#XSS练习" class="headerlink" title="XSS练习"></a>XSS练习</h2><h3 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h3><p>Cross-Site Scripting 简称为“CSS”，为避免与前端叠成样式表的缩写”CSS”冲突，故又称XSS。一般XSS可以分为如下几种常见类型：<br>  1.反射性XSS;<br>  2.存储型XSS;<br>  3.DOM型XSS;</p>
+<p>XSS漏洞一直被评估为web漏洞中危害较大的漏洞，在OWASP TOP10的排名中一直属于前三的江湖地位<br>XSS是一种发生在前端浏览器端的漏洞，所以其危害的对象也是前端用户<br>形成XSS漏洞的主要原因是程序对输入和输出没有做合适的处理，导致“精心构造”的字符输出在前端时被浏览器当作有效代码解析执行从而产生危害<br>因此在XSS漏洞的防范上，一般会采用“对输入进行过滤”和“输出进行转义”的方式进行处理:<br> 输入过滤：对输入进行过滤，不允许可能导致XSS攻击的字符输入;<br> 输出转义：根据输出点的位置对输出到前端的内容进行适当转义</p>
+<h3 id="反射型XSS-get"><a href="#反射型XSS-get" class="headerlink" title="反射型XSS(get)"></a>反射型XSS(get)</h3><img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/2.jpg" style="zoom:80%;">
+
+<p>是一个文本框，随便输一个测试功能正常</p>
+<img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/3.jpg" style="zoom:80%;">
+
+<p>输入特殊符号<code>&#39;</code> <code>&lt;</code>等发现无过滤</p>
+<p>尝试输入payload发现文本框限制了字符数</p>
+<p>审查元素修改一下<code>maxlength</code></p>
+<p>再输入payload:  <code>&lt;script&gt;alert(&#39;xss&#39;)&lt;/script&gt;</code></p>
+<img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/4.jpg" style="zoom:80%;">
+
+<p>成功触发XSS</p>
+<img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/5.jpg" style="zoom: 50%;">
+
+<p>ps: 或者直接在地址栏输入</p>
+<p><img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/6.jpg"></p>
+<p>也可以成功触发XSS</p>
+<h3 id="反射型XSS-post"><a href="#反射型XSS-post" class="headerlink" title="反射型XSS(post)"></a>反射型XSS(post)</h3><p>多一步登录的步骤</p>
+<p>登陆后文本框同上题</p>
+<p>同理输入payload，成功触发XSS</p>
+<h3 id="存储型XSS"><a href="#存储型XSS" class="headerlink" title="存储型XSS"></a>存储型XSS</h3><img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/7.jpg" style="zoom: 50%;">
+
+<p>是一个留言板，可以存入数据库，每次打开此页面都会显示之前的留言</p>
+<p>并且，经测试，发现输入特殊符号<code>&#39;</code> <code>&lt;</code>无过滤</p>
+<p>输入payload:  <code>&lt;script&gt;alert(&#39;存储型xss&#39;)&lt;/script&gt;</code></p>
+<img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/8.jpg" style="zoom: 80%;">
+
+<p>成功触发XSS，并且由于留言板写入数据库，每次打开此页面都会触发XSS</p>
+<img src="/2021/06/16/%E9%9D%B6%E5%9C%BA%E5%AE%9E%E6%88%98%E8%AE%B0%E5%BD%95/9.jpg" style="zoom:67%;">
+
+<h1 id="sqli-labs靶场"><a href="#sqli-labs靶场" class="headerlink" title="sqli-labs靶场"></a>sqli-labs靶场</h1><h1 id="DVWA靶场"><a href="#DVWA靶场" class="headerlink" title="DVWA靶场"></a>DVWA靶场</h1>]]></content>
+      <categories>
+        <category>渗透测试</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>渗透测试</tag>
       </tags>
   </entry>
   <entry>
